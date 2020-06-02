@@ -2,6 +2,9 @@
 <p>Find me in app/views/startups/show.html.erb</p>
 
 <%= @startup.name %>
+<% @startup.sectors.each do |sector| %>
+<%= sector.name %>
+<% end %>
 <%= @startup.description %>
 <%= @startup.address %>
 <%= @startup.website %>
