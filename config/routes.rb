@@ -14,3 +14,4 @@ Rails.application.routes.draw do
   resources :sectors, only: :index
   resources :profiles, only: [ :edit, :update ]
 end
+
