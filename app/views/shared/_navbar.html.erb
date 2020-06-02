@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-   <%= link_to "#", class: "navbar-brand" do %>
+   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "https://image.flaticon.com/icons/svg/178/178158.svg" %>
     <% end %>
 
@@ -12,8 +12,11 @@
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
       <% if user_signed_in? %>
+        <li class="nav-item nav-heart">
+          <%= link_to '<i class="fas fa-heart" style= "color:#52A87C"></i>'.html_safe, "#" %>
+        </li>
         <li class="nav-item dropdown">
-          <%= image_tag "https://images.unsplash.com/photo-1461039088886-b5c863279a0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= image_tag "https://images.unsplash.com/photo-1566998354563-227517a0d031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%#= link_to "Another action", "#", class: "dropdown-item" %>
             <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
