@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     resources :applications, only: [ :new, :create ]
   end
 
+  resources :favorites, only: :destroy
+  resources :applications, only: [ :show, :destroy ]
   resources :sectors, only: :index
   resources :profiles, only: [ :edit, :update ]
-  resources :user_sectors, only: [ :index, :create, :edit, :update ]
 end
