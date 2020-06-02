@@ -1,2 +1,9 @@
 <h1>Startups#index</h1>
 <p>Find me in app/views/startups/index.html.erb</p>
+
+<% @startups.each do |startup| %>
+<%= link_to startup.name, startup_path(startup) %>
+<%= startup.description %>
+<% end %>
+
+<!-- shorten description to 50 to 70 characters -->
