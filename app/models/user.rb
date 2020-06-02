@@ -12,6 +12,6 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
 
   has_many :sectors, through: :user_sectors
-  has_many :startups_as_applicant, through: :applications, source: :startups
-  has_many :startups_as_lover, through: :favorites, source: :startups
+  has_many :startups_as_applicant, through: :applications, source: :startup
+  has_many :startups_as_lover, through: :favorites, source: :startup
 end
