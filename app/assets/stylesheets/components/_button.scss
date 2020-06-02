@@ -1,0 +1,40 @@
+.btn-ghost {
+  color: #FFFFFF;
+  background-color: #52A87C;
+  border: 1px solid #52A87C;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: #FFFFFF;
+
+}
+
+.btn-ghost.btn-sm {
+  color: #FFFFFF;
+  background-color: #52A87C;
+  border: 1px solid #52A87C;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost.btn-sm:hover {
+  opacity: 1;
+}
+
+.btn-outline-primary {
+  border: 1px solid #51A87C;
+  color: #51A87C;
+}
+
+.btn-outline-primary {
+  opacity: 1;
+}
