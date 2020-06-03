@@ -15,9 +15,11 @@
 }
 
 .card-startup:hover {
-  border: 1px solid #72EFB1;
   opacity: 1;
   transition: opacity 0.3s ease;
+  // background-color: #52A87C;
+  // background-color: #72EFB1;
+  background-color: #CADBC8;
 }
 
 .card-startup img {
