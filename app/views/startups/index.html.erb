@@ -1,44 +1,24 @@
-<h2>Here are all the start-ups matching your interests:</h2>
+<div class="container">
+  <h2>Here are all the start-ups matching your interests:</h2>
 
-<div class="card-grid-startup">
-  <% @startups.each do |startup| %>
-  <%= link_to startup.name, startup_path(startup) %>
-  <%= startup.description %>
-  <% end %>
-</div>
+  <div class="container box">
+    <h6>Interests</h6>
+  </div>
 
+  <div class="container box">
+    <h6>Search form</h6>
+  </div>
 
+  <div class="container box">
+    <div>
+      <% @startups.each do |startup| %>
+        <%= link_to startup_path(startup) do %>
+          <%= render "shared/card-grid-startup", startup: startup %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 
-<div class="card-grid-startup">
-  <% @startups.each do |startup| %>
-  <%= link_to startup.name, startup_path(startup) do %>
-
-  <%= startup.description %>
-  <% end %>
 </div>
 <!-- shorten description to 50 to 70 characters -->
 
-
-<div class="card-grid-artifact">
-    <% @artifacts.each do |artifact| %>
-      <%= link_to artifact_path(artifact) do %>
-      <div class="card-trip-index">
-        <% if artifact.photo.attached? %>
-          <%= cl_image_tag artifact.photo.key, height: 600, width: 500, crop: :fill %>
-        <% else %>
-          <%= image_tag("https://images.unsplash.com/photo-1580711465053-6757198851cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2254&q=80", width: 600, height: 500, crop: :fill) %>
-        <% end %>
-        <div class="index-infos">
-        <div class="card-trip-infos">
-          <div>
-            <h2> <%= artifact.name %></h2>
-            <p>Made by <%= artifact.artist %> in <%= artifact.year %></p>
-          </div>
-          <h2 class="card-trip-pricing"><%= number_with_delimiter(artifact.starting_value, delimiter: ".") %> €</h2>
-          <div class="card-trip-user bid-count"><%= artifact.bids.count %></div>
-        </div>
-      </div>
-      </div>
-    <% end %>
-  <% end %>
-  </div>

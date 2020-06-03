@@ -1,4 +1,15 @@
 // Specific CSS for your home-page
+
+.box {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 3px;
+
+}
+// HOW IT WORKS CARDS
 .card-grid-how-it-works {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -10,8 +21,12 @@
   padding: 20px;
   align-items: center;
   justify-content: center;
-  h1 {
-    color: black;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h6 {
+    color: #52A87C;
+    text-align: center;
   }
 }
 .card-image {
