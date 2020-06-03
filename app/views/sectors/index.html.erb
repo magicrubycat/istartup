@@ -1,2 +1,9 @@
 <h1>Sectors#index</h1>
 <p>Find me in app/views/sectors/index.html.erb</p>
+
+
+<%= simple_form_for @user, url: profile_path(id: @user.id), method: "patch" do |f| %>
+  <%= f.association :sectors, as: :check_boxes %>
+  <%= f.submit "Save my interests" %>
+<% end %>
+
