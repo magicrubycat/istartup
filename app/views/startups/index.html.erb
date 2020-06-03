@@ -1,9 +1,24 @@
-<h1>Startups#index</h1>
-<p>Find me in app/views/startups/index.html.erb</p>
+<div class="container">
+  <h2>Here are all the start-ups matching your interests:</h2>
 
-<% @startups.each do |startup| %>
-<%= link_to startup.name, startup_path(startup) %>
-<%= startup.description %>
-<% end %>
+  <div class="container box">
+    <h6>Interests</h6>
+  </div>
 
+  <div class="container box">
+    <h6>Search form</h6>
+  </div>
+
+  <div class="container box">
+    <div>
+      <% @startups.each do |startup| %>
+        <%= link_to startup_path(startup) do %>
+          <%= render "shared/card-grid-startup", startup: startup %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
 <!-- shorten description to 50 to 70 characters -->
+
