@@ -10,3 +10,10 @@
 <%= @startup.address %>
 <%= @startup.website %>
 <%= @startup.email %>
+
+
+
+<%= simple_form_for @user, url: startup_favorite_path(@user.id, @startup.id), method: "patch" do |f| %>
+  <%= f.association :favorites, as: :check_boxes %>
+  <%= f.submit "Add to my favorites" %>
+<% end %>
