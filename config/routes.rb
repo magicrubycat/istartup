@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   resources :favorites, only: :destroy
   resources :applications, only: [ :show, :destroy ]
   resources :sectors, only: :index
-  resources :profiles, only: [ :edit, :update ]
+  resources :profiles, only: [ :create, :edit, :update ]
 end
 
