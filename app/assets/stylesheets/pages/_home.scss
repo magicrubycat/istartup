@@ -7,13 +7,14 @@
   margin: auto;
   margin-bottom: 20px;
   border-radius: 3px;
-
 }
 // HOW IT WORKS CARDS
 .card-grid-how-it-works {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .card-how-it-works {
