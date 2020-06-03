@@ -7,5 +7,6 @@ class StartupsController < ApplicationController
 
   def show
     @startup = Startup.find(params[:id])
+    @favorite = Favorite.new
   end
 end
