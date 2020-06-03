@@ -12,8 +12,16 @@
 }
 
 .nav-heart {
-  min-width: 50px;
+  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav-user {
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
 }
