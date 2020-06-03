@@ -13,7 +13,12 @@
     <div>
       <% @startups.each do |startup| %>
         <%= link_to startup_path(startup) do %>
-          <%= render "shared/card-grid-startup", startup: startup %>
+        <h1> <%= startup.name.capitalize%> </h1>
+        <p> Details:<%= startup.description %> </p>
+        <p>📍Address:<%= startup.address%> </p>
+        <p>Website: <%= startup.website%> </p>
+        <p>Email: <%= startup.email%> </p>
+        <!--   < render "shared/card-grid-startup", startup: startup %> -->
         <% end %>
       <% end %>
     </div>
@@ -21,4 +26,3 @@
 
 </div>
 <!-- shorten description to 50 to 70 characters -->
-

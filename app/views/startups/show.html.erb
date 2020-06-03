@@ -1,32 +1,33 @@
 
-<div class="container box">
-  <div>
-    <%= @startups.each do |startup| %>
-      <%= render "shared/card-startup-details", startup: startup %>
+<!-- <div class="container box">-->
+ <!-- <div>
+     #@startup.each do |startup| %>
+      < #render "shared/card-startup-details", startup: startup %>
+    < #end %>
+  </div> -->
+  <!-- </div>-->
+  <div class="container">
+    <h3>Details</h3>
+
+    <h1> <%= @startup.name %> </h1>
+    <% @startup.sectors.each do |sector| %>
+    <h3> <%= sector.name %> </h3>
     <% end %>
-  </div>
-</div>
 
-<h1>Startups#show</h1>
-<p>Find me in app/views/startups/show.html.erb</p>
-
-<%= @startup.name %>
-<% @startup.sectors.each do |sector| %>
-<%= sector.name %>
-<% end %>
-
-<%= @startup.description %>
-<%= @startup.address %>
-<%= @startup.website %>
-<%= @startup.email %>
+    <p> <%= @startup.description %> </p>
+    <p>Address: <%= @startup.address %> </p>
+    <p>Website: <%= @startup.website %> </p>
+    <p>Email: <%= @startup.email %> </p>
 
 
-<%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
-<% if user_favorite %>
-  <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete, data: { confirm: "Really?!"} %>
-<% else %>
-  <%= simple_form_for @favorite do |f| %>
+    <%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
+    <% if user_favorite %>
+    <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete %>
+    <% else %>
+    <%= simple_form_for @favorite do |f| %>
     <%= hidden_field_tag "favorite[startup_id]", @startup.id %>
     <%= f.button :submit %>
-  <% end %>
-<% end %>
+    <% end %>
+    <% end %>
+    <%= link_to "See all startups", startups_path %>
+  </div>
