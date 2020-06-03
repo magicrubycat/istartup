@@ -1,3 +1,4 @@
+
 <div class="container box">
   <div>
     <%= @startups.each do |startup| %>
@@ -5,3 +6,27 @@
     <% end %>
   </div>
 </div>
+
+<h1>Startups#show</h1>
+<p>Find me in app/views/startups/show.html.erb</p>
+
+<%= @startup.name %>
+<% @startup.sectors.each do |sector| %>
+<%= sector.name %>
+<% end %>
+
+<%= @startup.description %>
+<%= @startup.address %>
+<%= @startup.website %>
+<%= @startup.email %>
+
+
+<%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
+<% if user_favorite %>
+  <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete, data: { confirm: "Really?!"} %>
+<% else %>
+  <%= simple_form_for @favorite do |f| %>
+    <%= hidden_field_tag "favorite[startup_id]", @startup.id %>
+    <%= f.button :submit %>
+  <% end %>
+<% end %>
