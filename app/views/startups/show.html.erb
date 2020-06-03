@@ -1,12 +1,15 @@
-<h1>Startups#show</h1>
-<p>Find me in app/views/startups/show.html.erb</p>
+<div class="container box">
+  <h1>startup.name.capitalize</h1>
+  <p>Find me in app/views/startups/show.html.erb</p>
 
-<%= @startup.name %>
-<% @startup.sectors.each do |sector| %>
-<%= sector.name %>
-<% end %>
+  <%= @startup.name %>
+  <% @startup.sectors.each do |sector| %>
+  <%= sector.name %>
+  <% end %>
 
-<%= @startup.description %>
-<%= @startup.address %>
-<%= @startup.website %>
-<%= @startup.email %>
+  <%= @startup.description %>
+  <%= @startup.address %>
+  <%= @startup.website %>
+  <%= @startup.email %>
+
+</div>
