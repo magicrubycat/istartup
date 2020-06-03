@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+.card-grid-how-it-works {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-how-it-works {
+  width: 200;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: black;
+  }
+}
+.card-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
