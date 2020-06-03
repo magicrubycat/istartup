@@ -12,8 +12,12 @@
 <%= @startup.email %>
 
 
-
-<%= simple_form_for @user, url: startup_favorite_path(@user.id, @startup.id), method: "patch" do |f| %>
-  <%= f.association :favorites, as: :check_boxes %>
-  <%= f.submit "Add to my favorites" %>
+<%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
+<% if user_favorite %>
+  <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete, data: { confirm: "Really?!"} %>
+<% else %>
+  <%= simple_form_for @favorite do |f| %>
+    <%= hidden_field_tag "favorite[startup_id]", @startup.id %>
+    <%= f.button :submit %>
+  <% end %>
 <% end %>
