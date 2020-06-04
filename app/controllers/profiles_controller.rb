@@ -6,6 +6,8 @@ class ProfilesController < ApplicationController
   end
 
   def dashboard
+    @favorites = current_user.startups_as_lover
+    @interests = current_user.sectors
   end
 
   private
