@@ -1,7 +1,7 @@
 .footer {
   clear: both;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: -56px;
   background: #72EFB1;
   display: flex;
   align-items: center;
@@ -24,3 +24,4 @@
 .footer-links a:hover {
   opacity: 1;
 }
+
