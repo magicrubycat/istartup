@@ -3,10 +3,6 @@
 .grid-container {
   display: flex;
   flex-direction: column;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: 1fr 2.5fr 1fr;
-  // gap: 5px 5px;
-  // grid-template-areas: "user_sectors" "favorites" "applications";
   height: calc(100vh - 66px);
 }
 
@@ -15,7 +11,8 @@
 }
 
 .applications {
-    height: 100px;
+    height: 300px;
+    position: center;
 }
 
 .favorites {
@@ -27,16 +24,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .card-interests {
-  width: 50;
   padding: 20px;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
+  border-radius: 5px;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   h3 {
@@ -47,36 +43,31 @@
 }
 
 .card-logo-interests {
-  position: absolute;
+  justify-content: center;
   font-family: Font Awesome 5 Free;
-  font-style: normal;
   text-align: center;
 
   color: #51A87C;
-
-  border: 1px solid #51A87C;
-  box-sizing: border-box;
 }
 
 // FAVORITES CARDS
 .card-favorites {
   overflow: hidden;
   height: 120px;
-  width: 600px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 5px;
   margin-bottom: 15px;
   // padding: 5px;
 }
 .card-favorites:hover {
-  opacity: 1;
+  opacity: 0.9;
   transition: opacity 0.3s ease;
   // background-color: #52A87C;
   // background-color: #72EFB1;
-  background-color: #CADBC8;
+  background-color: #51A87C;
 }
 .card-favorites img {
   height: 100%;
@@ -111,19 +102,19 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .card-applications {
-  width: 120;
-  height: 120;
+  width: 230px;
+  height: 150px;
   padding: 20px;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
+  border-radius: 5px;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  h6 {
+  h3 {
     color: #52A87C;
     text-align: center;
     font-weight: bold;
