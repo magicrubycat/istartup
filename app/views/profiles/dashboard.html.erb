@@ -1,19 +1,16 @@
-<div class="grid-container">
+  <div class="container">
+
   <div class="user_sectors">
+    <%= render 'card-grid-interests' %>
 
-    <div class="container box">
-      <%= render 'card-grid-interests' %>
-        <ul>
+    <ul>
       <% @interests.each do |interest| %>
-     <li> <%= interest.name %> </li>
-    <% end %>
+       <li> <%= interest.name %> </li>
+      <% end %>
     </ul>
-
     <%= link_to "Edit interests", sectors_path %>
-    </div>
-
-
   </div>
+
   <div class="favorites">
     <%= render 'card-grid-favorites' %>
 
@@ -26,9 +23,11 @@
       <% end %>
     </ul>
   </div>
+
   <div class="applications">
     <%= render 'card-grid-applications' %>
   <!--  Here will be the applications (cards) that the user already sent
   - add cards (100px x 100px) with company name, logo, date when the application was sent -->
   </div>
+
 </div>
