@@ -9,16 +9,58 @@
 }
 
 .user_sectors {
-  height: 120px;
+  height: 100px;
   // grid-area: user_sectors;
 }
 
 .applications {
-    height: 120px;
+    height: 100px;
   // grid-area: applications;
 }
 
 .favorites {
   flex-grow: 1;
   // grid-area: favorites;
+}
+
+// INTEREST CARDS
+.card-grid-interests {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card-interests {
+  width: 200;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h6 {
+    color: #52A87C;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.card-logo-interests {
+  position: absolute;
+  width: 134px;
+  height: 60px;
+
+  font-family: Font Awesome 5 Free;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+
+  color: #51A87C;
+
+  border: 1px solid #51A87C;
+  box-sizing: border-box;
 }

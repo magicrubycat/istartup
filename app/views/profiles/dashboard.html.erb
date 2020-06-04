@@ -1,16 +1,21 @@
 <div class="grid-container">
-  <div class="user_sectors" style="background-color: green;">
-    <h1>Interests</h1>
-    <ul>
+  <div class="user_sectors">
+
+    <div class="container box">
+      <%= render 'card-grid-interests' %>
+        <ul>
       <% @interests.each do |interest| %>
      <li> <%= interest.name %> </li>
     <% end %>
     </ul>
 
     <%= link_to "Edit interests", sectors_path %>
+    </div>
+
+
   </div>
-  <div class="favorites" style="background-color: white;">
-    <h1>Favorites</h1>
+  <div class="favorites">
+    <%= render 'card-grid-favorites' %>
 
     <% if current_user.photo.attached? %>
     <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill %>
@@ -21,7 +26,8 @@
       <% end %>
     </ul>
   </div>
-  <div class="applications" style="background-color: red;">
+  <div class="applications">
+    <%= render 'card-grid-applications' %>
   <!--  Here will be the applications (cards) that the user already sent
   - add cards (100px x 100px) with company name, logo, date when the application was sent -->
   </div>
