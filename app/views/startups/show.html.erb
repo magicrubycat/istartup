@@ -22,12 +22,18 @@
 
     <%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
     <% if user_favorite %>
-    <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete %>
+      <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete %>
     <% else %>
-    <%= simple_form_for @favorite do |f| %>
-    <%= hidden_field_tag "favorite[startup_id]", @startup.id %>
-    <%= f.button :submit %>
-    <% end %>
+      <%= simple_form_for @favorite do |f| %>
+        <%= hidden_field_tag "favorite[startup_id]", @startup.id %>
+        <%= f.button :submit %>
+      <% end %>
     <% end %>
     <%= link_to "See all startups", startups_path %>
+
+      <%= simple_form_for [@startup, @application] do |f| %>
+        <%= hidden_field_tag "application[startup_id]", @startup.id %>
+        <%= f.button :submit %>
+      <% end %>
+
   </div>

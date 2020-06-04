@@ -9,8 +9,7 @@
   end
 
   resources :favorites, only: [ :create, :destroy ]
-  resources :favorites, only: :destroy
-  resources :applications, only: [ :show, :destroy ]
+  resources :applications, only: [ :show, :update, :destroy ]
   resources :sectors, only: :index
   resources :profiles, only: [ :create, :edit, :update ]
 end

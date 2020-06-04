@@ -1,2 +1,8 @@
-<h1>Applications#show</h1>
-<p>Find me in app/views/applications/show.html.erb</p>
+<div class="container">
+  <%= @application.content %>
+
+  <%= simple_form_for @application, url: application_path(@application) do |f| %>
+    <%= f.input :document, as: :file %>
+    <%= f.button :submit, "Attach document", class: "btn btn-ghost" %>
+  <% end %>
+</div>
