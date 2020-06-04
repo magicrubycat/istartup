@@ -138,11 +138,6 @@ email: 'info@flaregames.com'
 )
 startup6.save
 
-gaming_sector = Sector.new(
-name: 'gaming'
-
-)
-gaming_sector.save
 
 gaming_startup = StartupSector.new(
 startup: startup6,
