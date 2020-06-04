@@ -6,17 +6,17 @@
     < #end %>
   </div> -->
   <!-- </div>-->
+<div class="container card-startup-details">
   <div class="container">
-    <h3>Details</h3>
-
     <h1> <%= @startup.name %> </h1>
+    <hr style: "color=#52A87C">
     <% @startup.sectors.each do |sector| %>
-    <h3> <%= sector.name %> </h3>
+    <p> Sector: <%= sector.name.capitalize %> </p>
     <% end %>
 
-    <p> <%= @startup.description %> </p>
+    <p>Details: <%= @startup.description %> </p>
     <p>Address: <%= @startup.address %> </p>
-    <p>Website: <%= @startup.website %> </p>
+    <a href="<%= @startup.website %>"> <%= @startup.website %> </a>
     <p>Email: <%= @startup.email %> </p>
 
 
@@ -29,5 +29,6 @@
     <%= f.button :submit %>
     <% end %>
     <% end %>
-    <%= link_to "See all startups", startups_path %>
+    <%= link_to "See all startups", startups_path, class: "btn btn-ghost" %>
   </div>
+</div>
