@@ -1,5 +1,6 @@
 <h1>Startups#show</h1>
 <p>Find me in app/views/startups/show.html.erb</p>
+<!-- one startup only - here we can place our map view as well -->
 
 <%= @startup.name %>
 <% @startup.sectors.each do |sector| %>
@@ -10,3 +11,9 @@
 <%= @startup.address %>
 <%= @startup.website %>
 <%= @startup.email %>
+
+
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
