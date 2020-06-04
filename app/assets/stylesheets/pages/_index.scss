@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "dashboard";
 
 .card-startup {
   overflow: hidden;
@@ -13,7 +14,6 @@
   margin-bottom: 15px;
   // padding: 5px;
 }
-
 .card-startup:hover {
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -21,7 +21,6 @@
   // background-color: #72EFB1;
   background-color: #CADBC8;
 }
-
 .card-startup img {
   height: 100%;
   width: 120px;
@@ -29,13 +28,11 @@
   padding: 10px;
   border-radius: 30%;
 }
-
 .card-startup h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
-
 .card-startup p {
   font-size: 12px;
   line-height: 1.4;
@@ -43,7 +40,6 @@
   margin-bottom: 0;
   margin-top: 8px;
 }
-
 .card-startup .card-startup-infos {
   padding: 16px;
 }

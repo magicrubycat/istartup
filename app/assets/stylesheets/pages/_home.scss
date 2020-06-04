@@ -1,4 +1,7 @@
 // Specific CSS for your home-page
+.page-content {
+  min-height: calc(100vh - 66px);
+}
 
 .box {
   background-color: white;
@@ -28,10 +31,12 @@
   h6 {
     color: #52A87C;
     text-align: center;
+    font-weight: bold;
   }
 }
 .card-image {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  margin-bottom: 15px;
 }
