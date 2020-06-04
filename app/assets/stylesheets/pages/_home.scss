@@ -19,6 +19,9 @@ a {
   margin-bottom: 20px;
   border-radius: 3px;
   text-align: center;
+  &h4 {
+    font-weight: bold;
+  }
 }
 
 .box-card-index {
@@ -35,8 +38,8 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .card-how-it-works {
@@ -55,6 +58,34 @@ a {
 }
 .card-image {
   height: 100px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+// LOGO CARDS
+.card-grid-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.card-logo {
+  width: 40;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: white;
+}
+.card-image-logo {
+  height: 80px;
   width: 100%;
   object-fit: contain;
   margin-bottom: 15px;
