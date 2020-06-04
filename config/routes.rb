@@ -9,7 +9,7 @@
     resources :applications, only: [ :new, :create ]
   end
 
-  resources :favorites, only: :destroy
+  resources :favorites, only: [ :index, :destroy ]
   resources :applications, only: [ :show, :destroy ]
   resources :sectors, only: :index
   resources :profiles, only: [ :create, :edit, :update ]

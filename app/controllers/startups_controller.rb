@@ -4,17 +4,14 @@ class StartupsController < ApplicationController
 # GET /startups
   def index
     @startups = Startup.all
-    @startups = Startup.geocoded # returns startups with coordinates
-
-    @markers = @startups.map do |startup|
-      {
-        lat: startup.latitude,
-        lng: startup.longitude
-      }
-    end
   end
 
   def show
     @startup = Startup.find(params[:id])
+    @markers = [
+      {
+        lat: @startup.latitude,
+        lng: @startup.longitude
+      }]
   end
 end
