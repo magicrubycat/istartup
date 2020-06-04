@@ -9,13 +9,14 @@
 <div class="container card-startup-details">
   <div class="container">
     <h1> <%= @startup.name %> </h1>
+    <hr style: "color=#52A87C">
     <% @startup.sectors.each do |sector| %>
     <p> Sector: <%= sector.name.capitalize %> </p>
     <% end %>
 
     <p>Details: <%= @startup.description %> </p>
     <p>Address: <%= @startup.address %> </p>
-    <a href="<%= @startup.website %>">Website</a>
+    <a href="<%= @startup.website %>"> <%= @startup.website %> </a>
     <p>Email: <%= @startup.email %> </p>
 
 

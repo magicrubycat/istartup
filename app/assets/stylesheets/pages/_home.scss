@@ -2,6 +2,14 @@
 .page-content {
   min-height: calc(100vh - 66px);
 }
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
 
 .box {
   background-color: white;
@@ -10,7 +18,18 @@
   margin: auto;
   margin-bottom: 20px;
   border-radius: 3px;
+  text-align: center;
 }
+
+.box-card-index {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
 // HOW IT WORKS CARDS
 .card-grid-how-it-works {
   display: grid;
@@ -35,8 +54,8 @@
   }
 }
 .card-image {
-  height: 200px;
+  height: 100px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 15px;
 }
