@@ -9,6 +9,7 @@ class StartupsController < ApplicationController
   def show
     @startup = Startup.find(params[:id])
     @favorite = Favorite.new
+    @application = Application.new
     
     @markers = [
       {
