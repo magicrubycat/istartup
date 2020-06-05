@@ -14,7 +14,8 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    @favorite = Favorite.new(favorite_params)
+    @favorite = Favorite.new
+    @favorite.startup = Startup.find(params[:startup_id])
     @favorite.user = current_user
     if @favorite.save
       redirect_to startup_path(@favorite.startup)

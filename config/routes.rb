@@ -6,10 +6,12 @@
 
   resources :startups, only: [ :index, :show ] do
     resources :applications, only: [ :new, :create ]
+    resources :favorites, only: :create
   end
- 
+
+
   resources :applications, only: [ :index, :show, :create, :update, :destroy ]
-  resources :favorites, only: [ :index, :create, :destroy ]
+  resources :favorites, only: [ :index, :destroy ]
   resources :sectors, only: :index
   resources :profiles, only: [ :create, :edit, :update ]
 end
