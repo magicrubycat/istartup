@@ -5,6 +5,7 @@ class Startup < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :startup_sectors, dependent: :destroy
 
+  has_many :users, through: :favorites
   has_many :sectors, through: :startup_sectors
 
   geocoded_by :address

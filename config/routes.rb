@@ -5,11 +5,11 @@
   get 'dashboard', to: 'profiles#dashboard', as: :dashboard
 
   resources :startups, only: [ :index, :show ] do
-    resources :favorites, only: :create
     resources :applications, only: [ :new, :create ]
   end
 
-  resources :favorites, only: [ :index, :destroy ]
+
+  resources :favorites, only: [ :index, :create, :destroy ]
   resources :applications, only: [ :show, :destroy ]
   resources :sectors, only: :index
   resources :profiles, only: [ :create, :edit, :update ]

@@ -1,3 +1,28 @@
-<h1>Profiles#dashboard</h1>
-<p>Find me in app/views/profiles/dashboard.html.erb</p>
-<%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill %>
+<div class="grid-container">
+  <div class="user_sectors" style="background-color: green;">
+    <h1>Interests</h1>
+    <ul>
+      <% @interests.each do |interest| %>
+     <li> <%= interest.name %> </li>
+    <% end %>
+    </ul>
+
+    <%= link_to "Edit interests", sectors_path %>
+  </div>
+  <div class="favorites" style="background-color: white;">
+    <h1>Favorites</h1>
+
+    <% if current_user.photo.attached? %>
+    <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill %>
+    <% end %>
+    <ul>
+      <% @favorites.each do |favorite| %>
+      <li> <%= link_to favorite.name, startup_path(favorite) %> </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="applications" style="background-color: red;">
+  <!--  Here will be the applications (cards) that the user already sent
+  - add cards (100px x 100px) with company name, logo, date when the application was sent -->
+  </div>
+</div>

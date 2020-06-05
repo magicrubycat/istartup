@@ -1,3 +1,4 @@
+
 <h1>Sectors#index</h1>
 <p>Find me in app/views/sectors/index.html.erb</p>
 
@@ -6,12 +7,17 @@
   <%#= f.input :city, collection: Post::City, prompt: "Select your city" %>
 </div> -->
 
+<div class="container">
+<h1>Select your interests</h1>
+
+
 
 <!-- Jasmin's code -->
 <%= simple_form_for @user, url: profile_path(id: @user.id), method: "patch" do |f| %>
   <%= f.association :sectors, as: :check_boxes %>
   <%= f.submit "Save my interests", class: "btn btn-success" %>
 <% end %>
+
 
 
 <!-- <div class="form-group">
@@ -46,4 +52,7 @@
         <div class="form-check">
           <input class="form-check-input check_boxes optional" type="checkbox" value="4" name="user[sector_ids][]" id="user_sector_ids_4">
           <label class="form-check-label collection_check_boxes" for="user_sector_ids_4">sports</label></div><div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="5" name="user[sector_ids][]" id="user_sector_ids_5"><label class="form-check-label collection_check_boxes" for="user_sector_ids_5">gaming</label></div><div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="6" name="user[sector_ids][]" id="user_sector_ids_6"><label class="form-check-label collection_check_boxes" for="user_sector_ids_6">gaming</label></div><div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="7" name="user[sector_ids][]" id="user_sector_ids_7"><label class="form-check-label collection_check_boxes" for="user_sector_ids_7">environment</label></div><div class="form-check"><input class="form-check-input check_boxes optional" type="checkbox" value="8" name="user[sector_ids][]" id="user_sector_ids_8"><label class="form-check-label collection_check_boxes" for="user_sector_ids_8">medical</label></div></fieldset> -->
+
+
+</div>
 

@@ -1,11 +1,32 @@
-<h1>Startups#index</h1>
-<p>Find me in app/views/startups/index.html.erb</p>
-<!-- Search form goes in here -->
+<div class="container">
+  <h2>Here are all the start-ups matching your interests:</h2>
 
-<% @startups.each do |startup| %>
-<%= link_to startup.name, startup_path(startup) %>
-<%= startup.description %>
-<% end %>
+  <div class="container box">
+    <h6>Your chosen interests:</h6>
+  </div>
 
-<!-- shorten description to 50 to 70 characters -->
+  <div class="container box">
+    <h6>Search form</h6>
+  </div>
 
+  <div class="container box-card-index">
+    <div>
+      <% @startups.each do |startup| %>
+        <%= link_to startup_path(startup) do %>
+          <div class="container">
+            <div class="card-startup">
+              <img src="https://b2b.ifa-berlin.com/media/ifab2b/ifab2b_images/ifab2b_media_images_partner/partner_2019/ifa_ifanext_logo_lucid_MTabletXS.jpg" />
+              <div class="card-startup-infos">
+                <h2> <%= startup.name.capitalize%> </h2>
+                <% startup.sectors.each do |sector| %>
+                  <p> Sector: <%= sector.name.capitalize %> </p>
+                <% end %>
+                <p>📍Address: <%= startup.address%> </p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
