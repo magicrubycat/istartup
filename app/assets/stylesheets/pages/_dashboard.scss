@@ -52,17 +52,14 @@
 
 // FAVORITES CARDS
 .card-favorites {
-  overflow: hidden;
-  height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   border-radius: 5px;
   margin-bottom: 15px;
   // padding: 5px;
 }
-.card-favorites:hover {
+.card-favorites-infos:hover {
   opacity: 0.9;
   transition: opacity 0.3s ease;
   // background-color: #52A87C;
@@ -93,6 +90,7 @@
 }
 
 .card-favorites-infos {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 8px;
 }
 

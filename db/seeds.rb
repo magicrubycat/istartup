@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 StartupSector.delete_all
+UserSector.delete_all
 Sector.delete_all
 Startup.delete_all
 
@@ -36,7 +37,7 @@ medical_startup.save
 
 startup2 = Startup.new(
 name: 'Construyo',
-description: "Construyo provides a holistic project management service", 
+description: "Construyo provides a holistic project management service",
 address: "Borsigstraße 8, 10115 Berlin, Germany",
 website: 'www.construyo.de/',
 email: 'info@construyo.de'
@@ -59,7 +60,7 @@ IT_startup.save
 #3
 startup3 = Startup.new(
 name: 'Zenjob',
-description: "Zenjob is an automated staffing platform that connects large and medium-sized companies to student employees", 
+description: "Zenjob is an automated staffing platform that connects large and medium-sized companies to student employees",
 address: "Stromstraße 15, 10551 Berlin, Germany",
 website: 'http://wwww.zenjob.de',
 email: 'service@zenjob.de.com'
@@ -83,7 +84,7 @@ HR_startup.save
 #4
 startup4 = Startup.new(
 name: 'GymBeam',
-description: "manufacturer of more than 500 products of sport nutrition and functional food", 
+description: "manufacturer of more than 500 products of sport nutrition and functional food",
 address: "Gartenfelder Str. 1, 13599 Berlin, Germany",
 website: 'http://wwww.gymbeam.com',
 email: 'info@gymbeam.com'
@@ -107,7 +108,7 @@ sports_startup.save
 #5
 startup5 = Startup.new(
 name: 'MegaZebra',
-description: "creator of social games for social gaming industry", 
+description: "creator of social games for social gaming industry",
 address: "Steinsdorfstraße 2 80538 München Germany",
 website: 'http://wwww.megazebra.com',
 email: 'info@megazebra.com'
@@ -131,7 +132,7 @@ gaming_startup.save
 
 startup6 = Startup.new(
 name: 'Flaregames',
-description: "creator of social games for social gaming industry", 
+description: "creator of social games for social gaming industry",
 address: "Kaiserstraße 146-148 76133 Karlsruhe Germany",
 website: "https://www.flaregames.com/",
 email: 'info@flaregames.com'
@@ -150,7 +151,7 @@ gaming_startup.save
 
 startup7 = Startup.new(
 name: 'Sonnen',
-description: "produces home energy storage systems for private households and small businesses", 
+description: "produces home energy storage systems for private households and small businesses",
 address: "Am Riedbach 1 87499 Wildpoldsried Germany",
 website: "https://www.sonnen.de/",
 email: 'info@sonnen.com'
@@ -174,7 +175,7 @@ environment_startup.save
 
 startup8 = Startup.new(
 name: 'Teleclinic',
-description: "online emedicine platform. Users can request for a video consultation or phone call across a range of common medical topics ", 
+description: "online emedicine platform. Users can request for a video consultation or phone call across a range of common medical topics ",
 address: "St.-Martin-Straße 61, 81669 München, Germany",
 website: "https://www.teleclinic.com/",
 email: 'kundenservice@teleclinic.com'
