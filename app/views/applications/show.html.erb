@@ -2,7 +2,10 @@
   <h3>Your application for <%= @application.startup.name %></h3>
   <div class="d-flex">
     <div class="container">
-    <%= @application.content %>
+      <% text = @application.content.split("\n") %>
+      <% text.each do |string| %>
+        <p><%= string %></p>
+      <% end %>
     </div>
     <div class="container">
       <% if @application.document.attached? %>
@@ -19,3 +22,4 @@
       <%= link_to "Submit your application", class: "btn btn-outline-primary", style: "align-items: center" %>
     </div>
 </div>
+
