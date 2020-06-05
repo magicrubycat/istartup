@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="vertical-align: middle">
    <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "istartup_green.png" %>
     <% end %>
@@ -13,16 +13,16 @@
         </li>
       <% if user_signed_in? %>
         <li class="nav-item nav-heart">
-          <%= link_to '<i class="fas fa-heart" style= "color:#52A87C"></i>'.html_safe, "#" %>
+          <%= link_to '<i class="fas fa-heart" style="color:#52A87C"></i>'.html_safe, "#" %>
         </li>
         <li class="nav-item nav-user">
-          <%= link_to '<i class="fas fa-user" style= "color:#52A87C"></i>'.html_safe, dashboard_path %>
+          <%= link_to '<i class="fas fa-user" style="color:#52A87C"></i>'.html_safe, dashboard_path %>
         </li>
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% else %>
-          <%= image_tag "Photoavatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "Photoavatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%#= link_to "Another action", "#", class: "dropdown-item" %>
@@ -39,6 +39,4 @@
       <% end %>
     </ul>
   </div>
-
-
 </div>

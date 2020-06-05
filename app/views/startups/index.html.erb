@@ -1,28 +1,30 @@
-<div class="container">
+<div class="container" style= "margin-top: 30px">
+  <div class="container box-card-index">
   <h2>Here are all the start-ups matching your interests:</h2>
+    <div class="startup-cards">
+      <% @startups.each do |startup| %>
+        <%= link_to startup_path(startup) do %>
+          <div class="card-startup">
+            <img src="https://b2b.ifa-berlin.com/media/ifab2b/ifab2b_images/ifab2b_media_images_partner/partner_2019/ifa_ifanext_logo_lucid_MTabletXS.jpg" />
+            <div class="card-startup-infos">
+              <h2> <%= startup.name.capitalize%> </h2>
+              <% startup.sectors.each do |sector| %>
+                <p> Sector: <%= sector.name.capitalize %> </p>
+              <% end %>
+              <p>📍Address: <%= startup.address%> </p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 
   <div class="container box">
-    <h6>Interests</h6>
+    <h6>Your chosen interests:</h6>
   </div>
 
   <div class="container box">
     <h6>Search form</h6>
   </div>
 
-  <div class="container box">
-    <div>
-      <% @startups.each do |startup| %>
-        <%= link_to startup_path(startup) do %>
-        <h1> <%= startup.name.capitalize%> </h1>
-        <p> Details:<%= startup.description %> </p>
-        <p>📍Address:<%= startup.address%> </p>
-        <p>Website: <%= startup.website%> </p>
-        <p>Email: <%= startup.email%> </p>
-        <!--   < render "shared/card-grid-startup", startup: startup %> -->
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-
 </div>
-<!-- shorten description to 50 to 70 characters -->

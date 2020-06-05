@@ -11,7 +11,7 @@ require 'csv'
 StartupSector.delete_all
 Sector.delete_all
 Startup.delete_all
-
+ 
 csv_options = { headers: :first_row, header_converters: :symbol }
 CSV.foreach(Rails.root.join('./db/data/startups.csv'), csv_options) do |row|
   startup = Startup.create(

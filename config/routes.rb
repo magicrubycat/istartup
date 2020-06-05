@@ -7,10 +7,9 @@
   resources :startups, only: [ :index, :show ] do
     resources :applications, only: [ :new, :create ]
   end
-
-  resources :favorites, only: [ :create, :destroy ]
-  resources :favorites, only: :destroy
-  resources :applications, only: [ :show, :destroy ]
+ 
+  resources :applications, only: [ :index, :show, :create, :update, :destroy ]
+  resources :favorites, only: [ :index, :create, :destroy ]
   resources :sectors, only: :index
   resources :profiles, only: [ :create, :edit, :update ]
 end
