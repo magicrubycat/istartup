@@ -1,21 +1,33 @@
 <div class="container">
-  <h1>Favorites</h1>
+<h2>Welcome to your Dashboard!</h2>
 
-  <% if current_user.photo.attached? %>
-  <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill %>
-  <% end %>
-  <ul>
-    <% @favorites.each do |favorite| %>
-    <li> <%= link_to favorite.name, startup_path(favorite) %> </li>
+<div class="container">
+    <%= render 'card-grid-interests' %>
+
+    <ul>
+      <% @interests.each do |interest| %>
+       <li> <%= interest.name %> </li>
+      <% end %>
+    </ul>
+  <!-- SAFE THIS FOR LATER  <%= link_to "Edit interests", sectors_path %> -->
+</div>
+
+<div class="container">
+  <div class="favorites">
+    <%= render 'card-grid-favorites' %>
+
+    <% if current_user.photo.attached? %>
+    <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill %>
     <% end %>
-  </ul>
+    <ul>
+      <% @favorites.each do |favorite| %>
+      <li> <%= link_to favorite.name, startup_path(favorite) %> </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
-<h1>Interests</h1>
-<ul>
-  <% @interests.each do |interest| %>
- <li> <%= interest.name %> </li>
-<% end %>
-</ul>
-
-<%= link_to "Edit interests", sectors_path %>
+<div class="applications">
+  <%= render 'card-grid-applications' %>
+</div>
 </div>

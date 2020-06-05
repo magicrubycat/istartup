@@ -1,4 +1,15 @@
 // Specific CSS for your home-page
+.page-content {
+  min-height: calc(100vh - 66px);
+}
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
 
 .box {
   background-color: white;
@@ -7,14 +18,28 @@
   margin: auto;
   margin-bottom: 20px;
   border-radius: 3px;
+  text-align: center;
+  &h4 {
+    font-weight: bold;
+  }
 }
+
+.box-card-index {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
 // HOW IT WORKS CARDS
 .card-grid-how-it-works {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .card-how-it-works {
@@ -28,10 +53,40 @@
   h6 {
     color: #52A87C;
     text-align: center;
+    font-weight: bold;
   }
 }
 .card-image {
-  height: 200px;
+  height: 100px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+// LOGO CARDS
+.card-grid-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.card-logo {
+  width: 40;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: white;
+}
+.card-image-logo {
+  height: 80px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
 }

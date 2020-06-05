@@ -1,0 +1,132 @@
+// Specific CSS for the Dashboard
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 66px);
+}
+
+.user_sectors {
+  height: 100px;
+}
+
+.applications {
+    height: 300px;
+    position: center;
+}
+
+.favorites {
+  flex-grow: 1;
+}
+
+// INTEREST CARDS
+.card-grid-interests {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-interests {
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h3 {
+    color: #52A87C;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.card-logo-interests {
+  justify-content: center;
+  font-family: Font Awesome 5 Free;
+  text-align: center;
+
+  color: #51A87C;
+}
+
+// FAVORITES CARDS
+.card-favorites {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  // padding: 5px;
+}
+.card-favorites:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  // background-color: #52A87C;
+  // background-color: #72EFB1;
+  background-color: #51A87C;
+}
+.card-favorites img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 30%;
+}
+.card-favorites h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.card-favorites p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.card-favorites .card-favorites-infos {
+  padding: 16px;
+}
+
+.card-favorites-infos {
+  padding: 8px;
+}
+
+// APPLICATION CARDS
+.card-grid-applications {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-applications {
+  width: 230px;
+  height: 150px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h3 {
+    color: #52A87C;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.box {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  text-align: center;
+}
