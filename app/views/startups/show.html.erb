@@ -1,3 +1,20 @@
+<div class="container">
+  <h1><%= @startup.name %></h1>
+  <div class="row">
+    <div class="col col-lg-6">
+      <p><b>Primary Sector:</b></p>
+      <p><%= @startup.sectors.first.name %></p>
+      <%= @startup.description %>
+      <%= @startup.address %>
+      <%= @startup.website %>
+      <%= @startup.email %>
+    </div>
+    <div class="col col-lg-6">
+      <div id="map" class="z-depth-1-half map-container-6" style="height: 400px"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
 
 <!-- <div class="container box">-->
  <!-- <div>
