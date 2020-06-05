@@ -5,3 +5,12 @@
   margin: auto;
   margin: 20px;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
