@@ -1,19 +1,17 @@
 <div class="container" style= "margin-top: 30px">
   <div class="container box-card-index">
   <h2>Here are all the start-ups matching your interests:</h2>
-    <div>
+    <div class="startup-cards">
       <% @startups.each do |startup| %>
         <%= link_to startup_path(startup) do %>
-          <div class="container" style= "align-items: center">
-            <div class="card-startup">
-              <img src="https://b2b.ifa-berlin.com/media/ifab2b/ifab2b_images/ifab2b_media_images_partner/partner_2019/ifa_ifanext_logo_lucid_MTabletXS.jpg" />
-              <div class="card-startup-infos">
-                <h2> <%= startup.name.capitalize%> </h2>
-                <% startup.sectors.each do |sector| %>
-                  <p> Sector: <%= sector.name.capitalize %> </p>
-                <% end %>
-                <p>📍Address: <%= startup.address%> </p>
-              </div>
+          <div class="card-startup">
+            <img src="https://b2b.ifa-berlin.com/media/ifab2b/ifab2b_images/ifab2b_media_images_partner/partner_2019/ifa_ifanext_logo_lucid_MTabletXS.jpg" />
+            <div class="card-startup-infos">
+              <h2> <%= startup.name.capitalize%> </h2>
+              <% startup.sectors.each do |sector| %>
+                <p> Sector: <%= sector.name.capitalize %> </p>
+              <% end %>
+              <p>📍Address: <%= startup.address%> </p>
             </div>
           </div>
         <% end %>

@@ -2,7 +2,7 @@
   <div class="container card-startup-details">
     <div class="container">
       <h1> <%= @startup.name %> </h1>
-      <hr style: "color=#52A87C">
+      <hr style="color:#52A87C">
       <% @startup.sectors.each do |sector| %>
       <p> <strong>Sector:</strong> <%= sector.name.capitalize %> </p>
       <% end %>
@@ -12,14 +12,15 @@
       <p> 📍 <%= @startup.address %> </p>
       <p> ✉️ <%= @startup.email %> </p>
 
-
-      <%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
-      <% if user_favorite %>
-        <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete %>
-      <% else %>
-        <%= simple_form_for @favorite do |f| %>
-          <%= hidden_field_tag "favorite[startup_id]", @startup.id %>
-          <%= f.button :submit %>
+      <% if user_signed_in? %>
+        <%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
+        <% if user_favorite %>
+          <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete %>
+        <% else %>
+          <%= simple_form_for @favorite do |f| %>
+            <%= hidden_field_tag "favorite[startup_id]", @startup.id %>
+            <%= f.button :submit %>
+          <% end %>
         <% end %>
       <% end %>
 
