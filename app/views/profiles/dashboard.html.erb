@@ -4,30 +4,32 @@
 <div class="container">
     <%= render 'card-grid-interests' %>
 
-    <ul>
+    <!-- <ul>
       <% @interests.each do |interest| %>
        <li> <%= interest.name %> </li>
       <% end %>
     </ul>
-  <!-- SAFE THIS FOR LATER  <%= link_to "Edit interests", sectors_path %> -->
+  <%= link_to "Edit interests", sectors_path %> -->
 </div>
 
-<div class="container">
-  <div class="favorites">
-    <%= render 'card-grid-favorites' %>
-
-    <% if current_user.photo.attached? %>
-    <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill %>
-    <% end %>
-    <ul>
-      <% @favorites.each do |favorite| %>
-      <li> <%= link_to favorite.name, startup_path(favorite) %> </li>
-      <% end %>
-    </ul>
+<div class="container box">
+    <h4>Your favorite companies</h4>
+    <div>
+      <div class="card-favorites">
+        <% @favorites.each do |favorite| %>
+          <div class="card-favorites-infos mt-4">
+            <h2> <%= link_to favorite.name.capitalize, startup_path(favorite) %></h2>
+             <p> <% favorite.sectors.each do |sector| %> </p>
+                <p><%= sector.name.capitalize %> </p>
+              <% end %>
+            <p>:round_pushpin:Address: <%= favorite.address %> </p>
+          </div>
+       <% end %>
+      </div>
+    </div>
   </div>
-</div>
+
 
 <div class="applications">
   <%= render 'card-grid-applications' %>
-</div>
 </div>

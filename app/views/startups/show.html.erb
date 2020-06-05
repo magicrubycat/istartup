@@ -1,50 +1,40 @@
-
-<!-- <div class="container box">-->
- <!-- <div>
-     #@startup.each do |startup| %>
-      < #render "shared/card-startup-details", startup: startup %>
-    < #end %>
-  </div> -->
-  <!-- </div>-->
-  <div class="container">
-<div class="container card-startup-details">
-  <div class="container">
-    <h1> <%= @startup.name %> </h1>
-    <hr style: "color=#52A87C">
-    <% @startup.sectors.each do |sector| %>
-    <p> Sector: <%= sector.name.capitalize %> </p>
-    <% end %>
-
-    <p>Details: <%= @startup.description %> </p>
-    <p>Address: <%= @startup.address %> </p>
-    <a href="<%= @startup.website %>"> <%= @startup.website %> </a>
-    <p>Email: <%= @startup.email %> </p>
-
-
-    <%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
-    <% if user_favorite %>
-      <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete %>
-    <% else %>
-      <%= simple_form_for @favorite do |f| %>
-        <%= hidden_field_tag "favorite[startup_id]", @startup.id %>
-        <%= f.button :submit %>
-      <% end %>
-    <% end %>
-
-    <%= link_to "See all startups", startups_path %>
-
-      <%= simple_form_for [@startup, @application] do |f| %>
-        <%= hidden_field_tag "application[startup_id]", @startup.id %>
-        <%= f.button :submit %>
+<div class="container d-flex">
+  <div class="container card-startup-details">
+    <div class="container">
+      <h1> <%= @startup.name %> </h1>
+      <hr style="color:#52A87C">
+      <% @startup.sectors.each do |sector| %>
+      <p> <strong>Sector:</strong> <%= sector.name.capitalize %> </p>
       <% end %>
 
-    <%= link_to "See all startups", startups_path, class: "btn btn-ghost" %>
+      <p><strong>Details:</strong> <%= @startup.description %> </p>
+      <a href="<%= @startup.website %>"> <%= @startup.website %> </a>
+      <p> 📍 <%= @startup.address %> </p>
+      <p> ✉️ <%= @startup.email %> </p>
 
+      <% if user_signed_in? %>
+        <%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
+        <% if user_favorite %>
+          <%= link_to "Remove from favorites", favorite_path(user_favorite), method: :delete %>
+        <% else %>
+          <%= simple_form_for @favorite do |f| %>
+            <%= hidden_field_tag "favorite[startup_id]", @startup.id %>
+            <%= f.button :submit %>
+          <% end %>
+        <% end %>
+      <% end %>
+
+        <%= simple_form_for [@startup, @application] do |f| %>
+          <%= hidden_field_tag "application[startup_id]", @startup.id %>
+          <%= f.button :submit, class: "btn btn-ghost btn-sm", style: "margin-bottom: 10px" %>
+        <% end %>
+
+      <%= link_to "Back to all startups", startups_path, class: "btn btn-outline-primary" %>
+
+    </div>
   </div>
-</div>
-</div>
 
-<div class="container">
+ <div class="container">
   <div class="col col-lg-12">
       <div id="map" class="z-depth-1-half map-container-6" style="height: 400px"
        data-markers="<%= @markers.to_json %>"
@@ -52,3 +42,4 @@
       </div>
     </div>
   </div>
+</div>
