@@ -53,11 +53,8 @@
 // FAVORITES CARDS
 .card-favorites {
   background: white;
-  // display: flex;
-  // align-items: center;
   border-radius: 5px;
   margin-bottom: 15px;
-  // padding: 5px;
 }
 .card-favorites-infos:hover {
   opacity: 0.9;
@@ -120,6 +117,16 @@
 }
 
 .box {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.applications {
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   padding: 30px;
