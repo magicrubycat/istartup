@@ -5,3 +5,24 @@
   margin: auto;
   margin: 20px;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.fas {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #52A87C;
+}
+
+.fas:hover {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #80b79b;
+}

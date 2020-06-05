@@ -33,8 +33,11 @@
 .btn-outline-primary {
   border: 1px solid #51A87C;
   color: #51A87C;
+  border-radius: 30px;
 }
 
-.btn-outline-primary {
+.btn-outline-primary:hover {
   opacity: 1;
+  background-color: #51A87C;
+  border: 1px solid #51A87C;
 }
