@@ -3,18 +3,23 @@
   <%#= f.input :city, collection: Post::City, prompt: "Select your city" %>
 </div> -->
 
-<div class="container">
+<!--<div class="container">
   <h1>Select your interests</h1>
-  <% @sectors.each do |sector| %>
-    <%= link_to startups_path(sector_id: sector.id) do %>
+  < @sectors.each do |sector| %>
+    < link_to startups_path(sector_id: sector.id) do %>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title"><%= sector.name %></h5>
+          <h5 class="card-title">< sector.name %></h5>
           <p class="card-text">Add industry description</p>
         </div>
       </div>
-    <% end %>
-  <% end %>
+    < end %>
+  < end %>
+</div> -->
+
+<div class="container">
+  <%= simple_form_for @user, url: profile_path(id: @user.id), method: "patch" do |f| %>
+    <%= f.association :sectors, as: :check_boxes %>
+    <%= f.submit "Save my interests" %>
+   <% end %>
 </div>
-
-
