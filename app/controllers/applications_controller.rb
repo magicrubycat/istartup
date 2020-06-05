@@ -15,7 +15,7 @@ class ApplicationsController < ApplicationController
   end
 
   def update
-    @application.update(application_params)
+    render :show if @application.update(application_params)
   end
 
   def destroy

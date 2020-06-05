@@ -1,8 +1,21 @@
-<div class="container">
-  <%= @application.content %>
-
-  <%= simple_form_for @application, url: application_path(@application) do |f| %>
-    <%= f.input :document, as: :file %>
-    <%= f.button :submit, "Attach document", class: "btn btn-ghost" %>
-  <% end %>
+<div class="container box-application">
+  <h3>Your application for <%= @application.startup.name %></h3>
+  <div class="d-flex">
+    <div class="container">
+    <%= @application.content %>
+    </div>
+    <div class="container">
+      <% if @application.document.attached? %>
+        <%= cl_image_tag @application.document.key, height: 400, width: 300, crop: :fill %>
+      <% else %>
+        <%= simple_form_for @application, url: application_path(@application) do |f| %>
+          <%= f.input :document, as: :file, class: "btn btn-outline-primary" %>
+          <%= f.button :submit, "Attach document", class: "btn btn-ghost" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+    <div style= "align-items=center">
+      <%= link_to "Submit your application", class: "btn btn-outline-primary", style: "align-items: center" %>
+    </div>
 </div>
