@@ -7,4 +7,6 @@ class Sector < ApplicationRecord
 
   #has_many :users, through: :user_sectors
   #has_many :startups, through: :startup_sectors
+
+  INTEREST = ["Automotive", "Videogames", "Health", "Sports", "Tech", "Arts", "HR", "E-commerce", "Education"]
 end
