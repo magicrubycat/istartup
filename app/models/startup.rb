@@ -7,4 +7,7 @@ class Startup < ApplicationRecord
 
   has_many :users, through: :favorites
   has_many :sectors, through: :startup_sectors
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
