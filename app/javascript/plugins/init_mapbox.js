@@ -1,4 +1,5 @@
 import mapboxgl from 'mapbox-gl';
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
@@ -10,6 +11,8 @@ const initMapbox = () => {
   const mapElement = document.getElementById('map');
 
   if (mapElement) { // only build a map if there's a div#map to inject into
+    // map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+    //                                   mapboxgl: mapboxgl }));
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
