@@ -1,5 +1,5 @@
 class ApplicationsController < ApplicationController
-  before_action :set_application, only: [:show, :update, :destroy]
+  before_action :set_application, only: [:show, :edit, :update, :destroy]
 
   def index
     @applications = Application.where(user_id: current_user.id)
@@ -12,6 +12,10 @@ class ApplicationsController < ApplicationController
     @application.user = current_user
     @application.content = @application.content
     redirect_to application_path(@application) if @application.save
+  end
+
+  def edit
+
   end
 
   def update
