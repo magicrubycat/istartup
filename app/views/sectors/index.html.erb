@@ -3,18 +3,34 @@
   <%#= f.input :city, collection: Post::City, prompt: "Select your city" %>
 </div> -->
 
+
 <div class="container">
-  <h1>Select your interests</h1>
-  <% @sectors.each do |sector| %>
-    <%= link_to startups_path(sector_id: sector.id) do %>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"><%= sector.name %></h5>
-          <p class="card-text">Add industry description</p>
-        </div>
+  <div class="form-sector">
+    <h1>Select your interests</h1>
+    <%= simple_form_for @user, url: profile_path(id: @user.id), method: :patch do |f| %>
+    <div class="form-group">
+      <label class="control-label check_boxes optional">Categories</label>
+      <input type="hidden" name="user[sector_ids][]" value="">
+      <div class="category-choices">
+        <% Sector.all.each do |sector| %>
+        <input type="checkbox" class="hidden" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>">
+        <label for="user_sector_ids_<%= sector.id %>" class="category-choice">
+          <%= sector.name %>
+          <i class="fa fa-check"></i>
+        </label>
+        <% end %>
       </div>
+    </div>
+    <%= f.button :submit, "Save my interests", class: "btn btn-success" %>
     <% end %>
-  <% end %>
+  </div>
 </div>
 
 
+<script>
+  $(document).ready(function(){
+  $(".category-choice").click(function(){
+    $(this).toggleClass("active");
+  });
+});
+</script>

@@ -21,6 +21,9 @@
 
   <div class="container box">
     <h6>Your chosen interests:</h6>
+    <% current_user.sectors.each do |sector| %>
+      <%= sector.name %>
+    <% end %>
   </div>
 
   <div class="container box">
