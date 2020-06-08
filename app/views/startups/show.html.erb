@@ -18,17 +18,13 @@
       <% end %>
 
       <p><strong>Details:</strong> <%= @startup.description %> </p>
-      <a href="<%= @startup.website %>" style="color:#52A87C"> <%= @startup.website %> </a>
-      <p> 📍  <%= @startup.address %> </p>
-      <p> ✉️  <%= @startup.email %> </p>
+      <a href="<%= @startup.website %>" style="color:#52A87C; font-size:large"> <%= @startup.website %> </a>
+      <p> ✉️   <%= @startup.email %> </p>
+      <p> 📍   <%= @startup.address %> </p>
 
+<!-- BUTTONS  -->
 
-        <%= simple_form_for [@startup, @application] do |f| %>
-          <%= hidden_field_tag "application[startup_id]", @startup.id %>
-          <%= f.button :submit, class: "btn btn-ghost btn-sm", style: "margin-bottom: 10px" %>
-        <% end %>
-
-      <%= link_to "Back to all startups", startups_path, class: "btn btn-outline-primary" %>
+      <%= link_to "Back to all startups", startups_path, class: "btn btn-outline-primary btn-sm" %>
 
     </div>
   </div>

@@ -1,6 +1,8 @@
 .footer {
   clear: both;
-  background: #72EFB1;
+  // background: #72EFB1;
+  background: #79C99E;
+  // background: #E6E4E0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,5 +23,9 @@
 }
 .footer-links a:hover {
   opacity: 1;
+  color: #52A87C;
 }
 
+.fab {
+  // color: #52A87C;
+}
