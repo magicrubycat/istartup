@@ -5,6 +5,24 @@ class Application < ApplicationRecord
   belongs_to :startup
 
   def content
-    "#{self.startup.name} \n#{self.startup.address}\nDear Hiring Manager, \n \nI'm writing to express my interest in the Web Content Manager position listed on Monster.com. I have experience building large, consumer-focused health-based content sites. While much of my experience has been in the business world, I understand the social value of this sector and I am confident that my business experience will be an asset to your organization. \nMy responsibilities have included the development and management of: website editorial voice and style; editorial calendars; and the daily content programming and production for various websites. I have worked closely with healthcare professionals and medical editors to help them to provide the best possible information to a consumer audience of patients. I have also helped physicians to use their medical content to write user-friendly and easily comprehensible text. Experience has taught me how to build strong relationships with all departments in an organization. I have the ability to work within a team as well as cross-team. I can work with web engineers to resolve technical issues and implement technical enhancements. \nI am confident working with development departments to implement design and functional enhancements, and to monitor site statistics and conduct search engine optimization. \nThank you for your consideration. \n#{self.user.first_name} #{self.user.last_name} \n#{self.user.email}"
+    if read_attribute(:content).blank?
+      default_content
+    else
+      read_attribute(:content)
+    end
+  end
+
+  def default_content
+    "#{Date.today}\n#{self.startup.name} \n#{self.startup.address}\nDear Madam/Sir,\n
+    I’m writing to you regarding the internship role that opened up recently. I came across this internship on iStartUP platform, and was delighted to find that my academic achievements meet all of the necessary requirements. I am seeking a challenging and rewarding internship, which is why I was drawn to this exciting opportunity.\n
+    During my studies, I have acquired various skills as well as an increased inquisitiveness for everything related to your company’s focus and entrepreneurship.  As part of my future studies, I’d like to explore topics in the following areas:\n
+    Idea exploration and validation\n
+    Digital Marketing\n
+    Customer Survey\n
+    Fundraising\n
+    Product development\n
+    I would be delighted to have an opportunity to personally interview with you. Please accept the enclosed resume and feel free to contact me at your earliest convenience.  I appreciate your time and consideration.\n
+    Yours sincerely,\n
+    #{self.user.first_name} #{self.user.last_name} \n#{self.user.email}"
   end
 end
