@@ -1,63 +1,9 @@
 <div class="container">
   <h2>Welcome to your Dashboard!</h2>
 
-  <div class="container box">
-    <h4>You are interested in</h4>
-    <div class="card-grid-interests">
-      <div class="card-interests">
-        <div class= "card-logo-interests">
-          <i class="fas fa-first-aid fa-3x"></i>
-          <i class="<%= sector.sector_icon_font %> fa-3x"></i>
-        </div>
-        <h6>
-          <ul>
-            <% @interests.each do |interest| %>
-            <li> <%= interest.name %> </li>
-            <% end %>
-          </ul>
-        </h6>
-      </div>
-<!--       <a class="btn btn-ghost btn-sm"></a>
-      <%= link_to "Edit interests", sectors_path %> -->
-    </div>
-  </div>
+<%= render 'dashboard-interests' %>
 
-  <div class="container">
-    <h4>Your favorite companies</h4>
-    <div>
-      <div class="card-favorites">
-        <% @favorites.each do |favorite| %>
-          <div class="card-favorites-infos mt-4">
-            <h2> <%= link_to favorite.name.capitalize, startup_path(favorite) %></h2>
-             <p> <% favorite.sectors.each do |sector| %> </p>
-                <p><%= sector.name.capitalize %> </p>
-              <% end %>
-            <p>📍Address: <%= favorite.address %> </p>
-          </div>
-       <% end %>
-      </div>
-    </div>
-  </div>
+<%= render 'dashboard-favorites' %>
 
+<%= render 'dashboard-applications' %>
 
-<div class="container applications">
-  <h4>Your sent applications</h4>
-  <div class="card-grid-applications">
-    <div class="card-applications">
-      <i class="fas fa-file"></i>
-      <h6>Flaregames</h6>
-    </div>
-    <div class="card-applications">
-      <i class="fas fa-file"></i>
-      <h6>Teleclinic</h6>
-    </div>
-    <div class="card-applications">
-      <i class="fas fa-file"></i>
-      <h6>Sonnen</h6>
-    </div>
-    <div class="card-applications">
-      <i class="fas fa-file"></i>
-      <h6>GymBeam</h6>
-    </div>
-  </div>
-</div>
