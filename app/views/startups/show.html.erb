@@ -21,8 +21,8 @@
       <p> ✉️   <%= @startup.email %> </p>
       <p> 📍   <%= @startup.address %> </p>
 <!-- BUTTONS  -->
-      <% if current_user.applications.first.present? %>
-        <%= link_to 'View application', application_path(current_user.applications), class: "btn btn-ghost" %>
+      <% if current_user.applications.exists? %>
+        <%= link_to 'View application', application_path(current_user.applications.id), class: "btn btn-ghost" %>
       <% else %>
         <%= simple_form_for [@startup, @application] do |f| %>
           <%= hidden_field_tag "application[startup_id]", @startup.id %>
