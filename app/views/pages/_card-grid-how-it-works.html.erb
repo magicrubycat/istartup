@@ -2,15 +2,15 @@
   <div class="card-grid-how-it-works">
     <div class="card-how-it-works">
       <%= image_tag "https://image.flaticon.com/icons/svg/2910/2910472.svg", width: 200, class: "card-image" %>
-      <h6>Sign up & create your profile</h6>
+      <h6><%= link_to "Sign up & create your profile", new_user_session_path %></h6>
     </div>
     <div class="card-how-it-works">
       <%= image_tag "https://image.flaticon.com/icons/svg/2910/2910454.svg", width: 200, class: "card-image" %>
-      <h6>Choose your interests</h6>
+      <h6><%= link_to "Choose your interests", sectors_path %></h6>
     </div>
     <div class="card-how-it-works">
       <%= image_tag "https://image.flaticon.com/icons/svg/2910/2910433.svg", width: 200, class: "card-image" %>
-      <h6>Find matching start-ups</h6>
+      <h6><%= link_to "Find matching start-ups", startups_path %></h6>
     </div>
     <div class="card-how-it-works">
       <%= image_tag "https://image.flaticon.com/icons/svg/2910/2910492.svg", width: 200, class: "card-image" %>

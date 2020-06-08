@@ -1,9 +1,30 @@
 .card-startup-details {
   border-radius: 30px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.1);
   padding: 30px;
   margin: auto;
   margin: 20px;
+}
+
+.d-flex {
+  // border-radius: 30px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.d-flex .show {
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.favorite-icon {
+  margin-left: 300px;
+  margin-top: 7px;
+}
+
+p {
+  font-size: medium;
 }
 
 a {
@@ -16,13 +37,29 @@ a {
 }
 
 .fas {
-    font-size: 25px;
-    margin-bottom: 15px;
-    color: #52A87C;
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #52A87C;
 }
 
 .fas:hover {
-    font-size: 25px;
-    margin-bottom: 15px;
-    color: #80b79b;
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #80b79b;
+}
+
+.far {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #52A87C;
+}
+
+.far:hover {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #80b79b;
+}
+
+#map {
+  margin-bottom: 50px;
 }
