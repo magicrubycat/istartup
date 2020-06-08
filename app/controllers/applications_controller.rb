@@ -22,6 +22,11 @@ class ApplicationsController < ApplicationController
     @applcation.destroy
   end
 
+  def generate_pdf
+    grover = Grover.new(_application_content.html.erb, format: 'A4')
+    @pdf = grover.to_pdf
+  end
+
   private
 
   def set_application
@@ -29,6 +34,6 @@ class ApplicationsController < ApplicationController
   end
 
   def application_params
-    params.require(:application).permit(:startup_id, :user_id, :sent, :document)
+    params.require(:application).permit(:id, :startup_id, :user_id, :sent, :document, :content)
   end
 end
