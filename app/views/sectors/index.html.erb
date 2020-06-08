@@ -13,24 +13,42 @@
       <input type="hidden" name="user[sector_ids][]" value="">
       <div class="category-choices">
         <% Sector.all.each do |sector| %>
-        <input type="checkbox" class="hidden" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>">
+        <input type="checkbox" class="d-none" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>">
         <label for="user_sector_ids_<%= sector.id %>" class="category-choice">
           <%= sector.name %>
-          <i class="fa fa-check"></i>
+          <i class=""></i>
         </label>
         <% end %>
       </div>
     </div>
+    <div id="button-center">
     <%= f.button :submit, "Save my interests", class: "btn btn-success" %>
     <% end %>
+    </div>
   </div>
 </div>
 
 
 <script>
-  $(document).ready(function(){
-  $(".category-choice").click(function(){
-    $(this).toggleClass("active");
-  });
-});
+  const sectors = document.querySelectorAll('.category-choice');
+
+const toggleActiveClass = (event) => {
+  event.currentTarget.classList.toggle('active');
+};
+
+const toggleActiveOnClick = (sector) => {
+  sector.addEventListener('click', toggleActiveClass);
+};
+
+sectors.forEach(toggleActiveOnClick);
+
+
+
+
+
+//   $(document).ready(function(){
+//   $(".category-choice").click(function(){
+//     $(this).toggleClass("active");
+//   });
+// });
 </script>
