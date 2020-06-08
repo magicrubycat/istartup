@@ -1,0 +1,56 @@
+.form-sector {
+  background: white;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #666666;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+  .btn {
+    width: 50%;
+    padding: 10px;
+    font-weight: bold;
+  }
+}
+
+// Checkboxes design
+.category-choices {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+#button-center {
+  text-align: center;
+  margin: auto;
+}
+
+.category-choice {
+  background: #b7b7b7;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: 1;
+  text-align: center;
+  height: 180px;
+  width: 180px;
+  margin: 30px;
+  margin-bottom: 30px;
+  &:hover {
+    opacity: .4;
+    cursor: pointer;
+  }
+  &.active {
+  background-color: $green;
+  color: white;
+  opacity: 1;
+  }
+}
+
+// change the background colour in ACTIVE

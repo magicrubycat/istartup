@@ -2,11 +2,11 @@
   <h3>Your application for <%= @application.startup.name %></h3>
   <div class="d-flex">
     <div class="container">
-    <%= @application.content %>
+      <%= render "application_content", application: @application %>
     </div>
     <div class="container">
       <% if @application.document.attached? %>
-        <%= cl_image_tag @application.document.key, height: 400, width: 300, crop: :fill %>
+        <embed src="<%=@application.document.key%>" type="pdf" width="100%" height="600px">
       <% else %>
         <%= simple_form_for @application, url: application_path(@application) do |f| %>
           <%= f.input :document, as: :file, class: "btn btn-outline-primary" %>
@@ -16,6 +16,10 @@
     </div>
   </div>
     <div style= "align-items=center">
+      <%= link_to "Edit your Application", edit_application_path %>
       <%= link_to "Submit your application", class: "btn btn-outline-primary", style: "align-items: center" %>
     </div>
 </div>
+
+
+
