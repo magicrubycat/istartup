@@ -5,7 +5,9 @@ class ApplicationsController < ApplicationController
     @applications = Application.where(user_id: current_user.id)
   end
 
-  def show; end
+  def show
+    p @application
+  end
 
   def create
     @application = Application.new(application_params)
@@ -14,12 +16,14 @@ class ApplicationsController < ApplicationController
     redirect_to application_path(@application) if @application.save
   end
 
-  def edit
-
-  end
+  def edit; end
 
   def update
-    render :show if @application.update(application_params)
+    if @application.update(application_params)
+      redirect_to application_path(@application)
+    else
+      render :edit
+    end
   end
 
   def destroy
