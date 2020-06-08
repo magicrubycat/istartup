@@ -1,39 +1,40 @@
-<div class="container d-flex">
+<div class="container d-flex show">
   <div class="container card-startup-details">
     <div class="container">
-      <h1> <%= @startup.name %> </h1>
-      <hr style="color:#52A87C">
+      <div class="d-flex">
+        <h1> <%= @startup.name %> </h1>
+        <% if user_signed_in? %>
+          <%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
+          <% if user_favorite %>
+            <%= link_to '<i class="fas fa-heart favorite-icon"></i>'.html_safe, favorite_path(user_favorite), method: :delete %>
+          <% else %>
+            <%= link_to '<i class="far fa-heart favorite-icon"></i>'.html_safe, startup_favorites_path(@startup), method: :post %>
+          <% end %>
+        <% end %>
+      </div>
+      <hr style="color:#52A87C; margin-bottom: 20px">
       <% @startup.sectors.each do |sector| %>
       <p> <strong>Sector:</strong> <%= sector.name.capitalize %> </p>
       <% end %>
-
       <p><strong>Details:</strong> <%= @startup.description %> </p>
-      <a href="<%= @startup.website %>"> <%= @startup.website %> </a>
-      <p> 📍 <%= @startup.address %> </p>
-      <p> ✉️ <%= @startup.email %> </p>
-
-      <% if user_signed_in? %>
-        <%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
-        <% if user_favorite %>
-          <%= link_to '<i class="fas fa-heart-broken"></i>'.html_safe, favorite_path(user_favorite), method: :delete %>
-        <% else %>
-          <%= link_to '<i class="fas fa-heart"></i>'.html_safe, startup_favorites_path(@startup), method: :post %>
-        <% end %>
-      <% end %>
-
+      <a href="<%= @startup.website %>" style="color:#52A87C; font-size:large"> <%= @startup.website %> </a>
+      <p> ✉️   <%= @startup.email %> </p>
+      <p> 📍   <%= @startup.address %> </p>
+<!-- BUTTONS  -->
+      <% if current_user.applications.first.present? %>
+        <%= link_to 'View application', application_path(current_user.applications), class: "btn btn-ghost" %>
+      <% else %>
         <%= simple_form_for [@startup, @application] do |f| %>
           <%= hidden_field_tag "application[startup_id]", @startup.id %>
-          <%= f.button :submit, class: "btn btn-ghost btn-sm", style: "margin-bottom: 10px" %>
+          <%= f.button :submit, class: "btn btn-ghost", style: "margin-bottom: 10px" %>
         <% end %>
-
-      <%= link_to "Back to all startups", startups_path, class: "btn btn-outline-primary" %>
-
+      <% end %>
+      <%= link_to "Back to all startups", startups_path, class: "btn btn-outline-primary btn-sm" %>
     </div>
   </div>
-
  <div class="container">
   <div class="col col-lg-12">
-      <div id="map" class="z-depth-1-half map-container-6" style="height: 400px"
+      <div id="map" class="z-depth-1-half map-container-6" style="height: 600px; margin-top:50px"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
