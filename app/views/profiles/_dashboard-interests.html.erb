@@ -1,0 +1,19 @@
+<div class="container interests">
+    <h4>You are interested in</h4>
+    <div class="card-grid-interests">
+      <div class="card-interests">
+        <div class= "card-logo-interests">
+          <i class="fas fa-first-aid fa-3x"></i>
+        </div>
+        <h6>
+          <ul>
+            <% @interests.each do |interest| %>
+            <li> <%= interest.name %> </li>
+            <% end %>
+          </ul>
+        </h6>
+      </div>
+<!--       <a class="btn btn-ghost btn-sm"></a>
+      <%= link_to "Edit interests", sectors_path %> -->
+    </div>
+  </div>
