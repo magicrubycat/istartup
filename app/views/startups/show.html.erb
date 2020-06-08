@@ -8,7 +8,7 @@
           <% if user_favorite %>
             <%= link_to '<i class="fas fa-heart favorite-icon"></i>'.html_safe, favorite_path(user_favorite), method: :delete %>
           <% else %>
-            <%= link_to '<i class="far fa-heart"></i>'.html_safe, startup_favorites_path(@startup), method: :post %>
+            <%= link_to '<i class="far fa-heart favorite-icon"></i>'.html_safe, startup_favorites_path(@startup), method: :post %>
           <% end %>
         <% end %>
       </div>

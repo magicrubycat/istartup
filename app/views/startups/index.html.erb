@@ -10,8 +10,10 @@
     <div class="startup-cards">
       <% @startups.each do |startup| %>
         <div class="card-codepen position-relative">
-          <%= render 'startups/card-startup-index', name: startup.name.capitalize, address: startup.address.capitalize, email: startup.email, website: startup.website, description: startup.description.capitalize %>
+          <%= link_to startup_path(startup) do %>
+          <%= render 'startups/card-startup-index', startup: startup, name: startup.name.capitalize, address: startup.address.capitalize, email: startup.email, website: startup.website, description: startup.description.capitalize %>
         </div>
+        <% end %>
       <% end %>
     </div>
   </div>

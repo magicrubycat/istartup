@@ -30,10 +30,12 @@ html, body {
 .card h1 {
   text-align: left;
   // margin-left: 18px;
+  color: black;
 }
 
 .card p {
   text-align: left;
+  color: black;
 }
 
 .card .additional {
@@ -185,9 +187,10 @@ html, body {
 
 .card .general .more {
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   right: 1rem;
   font-size: 0.9em;
+  color: gray;
 }
 
 .fas:hover {
