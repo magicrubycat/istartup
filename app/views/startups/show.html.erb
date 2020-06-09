@@ -20,8 +20,8 @@
       <a href="<%= @startup.website %>" style="color:#52A87C; font-size:large"> <%= @startup.website %> </a>
       <p> ✉️   <%= @startup.email %> </p>
       <p> 📍   <%= @startup.address %> </p>
-<!-- BUTTONS  -->
 
+<!-- BUTTONS  -->
     <% if current_user.application_for(@startup) %>
         <%= link_to 'View application', application_path(current_user.application_for(@startup)), class: "btn btn-ghost" %>
     <% else %>
@@ -31,7 +31,7 @@
       <% end %>
     <% end %>
 
-    <%= link_to "Back to all startups", startups_path, class: "btn btn-outline-primary" %>
+    <%= link_to "Back to all startups", startups_path, class: "btn btn-outline-primary btn-sm" %>
 
     </div>
   </div>
