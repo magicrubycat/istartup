@@ -1,6 +1,6 @@
 <div class="container box-application">
 <div class="container">
-  <h2 style="color:#50A87C; margin-bottom: 20px; text-align: center">Edit your application for <%= @application.startup.name %></h2>
+  <h2 style="color:#50A87C; margin-bottom: 20px; text-align: center">Personalize your application for <%= @application.startup.name %></h2>
 
 <div style= "align-items=center">
   <%= simple_form_for @application, url: application_path(@application), method: :patch do |f| %>
