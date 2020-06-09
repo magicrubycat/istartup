@@ -3,6 +3,9 @@
     <div class="container">
       <div class="d-flex">
         <h1> <%= @startup.name %> </h1>
+        <% @startup.sectors.each do |sector| %>
+          <i class="<%= sector.sector_icon_font %> sector-icon", style="margin-left:20px"></i>
+        <% end %>
         <% if user_signed_in? %>
           <%  user_favorite = @startup.favorites.where(user_id: current_user.id).first %>
           <% if user_favorite %>
@@ -13,16 +16,13 @@
         <% end %>
       </div>
       <hr style="color:#52A87C; margin-bottom: 20px">
-      <% @startup.sectors.each do |sector| %>
-      <p> <strong>Sector:</strong> <%= sector.name.capitalize %> </p>
-      <% end %>
-      <p><strong>Details:</strong> <%= @startup.description %> </p>
-      <a href="<%= @startup.website %>" style="color:#52A87C; font-size:large"> <%= @startup.website %> </a>
-      <p> ✉️   <%= @startup.email %> </p>
+      <p> <%= @startup.description %> </p>
       <p> 📍   <%= @startup.address %> </p>
-
+      <a href="<%= @startup.website %>" style="color:#52A87C; font-size:large"> <%= @startup.website %> </a>
+      <p style="margin-top: 15px"> ✉️   <%= @startup.email %> </p>
 <!-- BUTTONS  -->
-    <% if current_user.application_for(@startup) %>
+
+    <% if user_signed_in? && current_user.application_for(@startup) %>
         <%= link_to 'View application', application_path(current_user.application_for(@startup)), class: "btn btn-ghost" %>
     <% else %>
       <%= simple_form_for [@startup, @application] do |f| %>

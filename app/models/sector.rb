@@ -1,5 +1,5 @@
 class Sector < ApplicationRecord
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 
   has_many :user_sectors, dependent: :destroy
   has_many :startup_sectors, dependent: :destroy

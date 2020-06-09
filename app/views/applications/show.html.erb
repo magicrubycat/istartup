@@ -1,5 +1,6 @@
 <div class="container box-application">
-  <h3>Your application for <%= @application.startup.name %></h3>
+  <h1 style="color:#50A87C; text-align:center; margin-bottom: 30px">Your application for <%= @application.startup.name %></h1>
+    <p style="color:#52A87C; margin-top: -40px; text-align:center">______________________________________________________________________</p>
   <div class="d-flex">
     <div class="container">
       <%= render "application_content", application: @application %>
@@ -10,21 +11,16 @@
         <embed src="<%=cl_image_tag(@application.document.key)%>" type="pdf" width="100%" height="600px">
       <% else %>
         <%= simple_form_for @application, url: application_path(@application) do |f| %>
-          <%= f.input :document, as: :file, class: "btn btn-outline-primary" %>
+          <%= f.input :document, as: :file, class: "btn btn-outline-primary", label: false%>
           <%= f.button :submit, "Attach document", class: "btn btn-outline-primary" %>
         <% end %>
       <% end %>
+      <%= link_to "Go back to #{@application.startup.name}", startup_path(@application.startup.id), class: "btn btn-outline-primary" %>
     </div>
   </div>
     <div style= "align-items=center">
       <%= link_to "", sent_application_path(@application), method: :patch, id: "delete-link", class: "hidden" %>
-      <button id="sweet-alert-demo" class="btn btn-outline-primary">Submit your application</button>
-      <%#= link_to "", flat_path(@flat), method: :delete, id: "delete-link", class: "hidden" %>
+      <button id="sweet-alert-demo" class="btn btn-ghost">Submit your application</button>
       <%= link_to "Edit your application", edit_application_path, class: "btn btn-outline-primary" %>
     </div>
 </div>
-
-
-<!--  < cl_image_tag("#{@application.document.key}.pdf") %> -->
-
-

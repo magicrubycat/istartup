@@ -73,8 +73,6 @@
 .card-favorites-infos:hover {
   opacity: 0.9;
   transition: opacity 0.3s ease;
-  // background-color: #52A87C;
-  // background-color: #72EFB1;
   background-color: #51A87C;
 }
 .card-favorites img {
@@ -112,31 +110,30 @@
 
 // APPLICATION CARDS
 
-.applications {
-  height: 300px;
+.app {
   position: center;
   background-color: white;
   padding: 30px;
-  margin: auto;
   margin-bottom: 20px;
   border-radius: 3px;
   text-align: center;
+  grid-gap: 16px;
+  align-items: center;
 }
 
 .card-grid-applications {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .card-applications {
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   width: 230px;
-  height: 150px;
   padding: 20px;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
   border-radius: 5px;
   background-color: white;
   border-style: solid;
@@ -144,7 +141,9 @@
   border-color: #D7D7D7;
   h3 {
     color: #52A87C;
-    text-align: center;
-    font-weight: bold;
+    text-align: left;
+    font-weight: 600;
   }
 }
+
+
