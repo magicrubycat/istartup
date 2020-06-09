@@ -16,7 +16,8 @@
         <input type="checkbox" class="d-none" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>">
         <label for="user_sector_ids_<%= sector.id %>" class="category-choice">
           <%= sector.name %>
-          <i class=""></i>
+          <i class="<%= sector.sector_icon_font %>"></i>
+          <!-- to be updated with the right css etc.  -->
         </label>
         <% end %>
       </div>
@@ -42,13 +43,4 @@ const toggleActiveOnClick = (sector) => {
 
 sectors.forEach(toggleActiveOnClick);
 
-
-
-
-
-//   $(document).ready(function(){
-//   $(".category-choice").click(function(){
-//     $(this).toggleClass("active");
-//   });
-// });
 </script>
