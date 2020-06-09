@@ -4,6 +4,21 @@
   vertical-align: middle;
 }
 
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
   vertical-align: middle;
@@ -24,6 +39,16 @@
   padding-top: 11px;
 }
 
+.nav-link {
+  vertical-align: middle;
+}
+
+.nav-item {
+  padding-top: 3px;
+  margin-right: 16px
+}
+
+// ________________________________________________ commented out
 // .nav-heart {
 //   min-width: 40px;
 //   display: flex;
@@ -41,11 +66,6 @@
 //   vertical-align: middle;
 // }
 
-.nav-link {
-  vertical-align: middle;
-}
 
-.nav-item {
-  padding-top: 3px;
-  margin-right: 16px
-}
+// ____________________________________________________
+

@@ -9,7 +9,11 @@
   height: 56px;
   padding: 0px 50px;
   width: 100%;
+  margin-top: 50px;
+  bottom: 0;
+  position: relative;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -29,3 +33,19 @@
 .fab {
   // color: #52A87C;
 }
+
+// #page-container {
+//   position: relative;
+//   min-height: 100vh;
+// }
+
+// #content-wrap {
+//   padding-bottom: 2.5rem;    /* Footer height */
+// }
+
+// .footer {
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+//   height: 2.5rem;            /* Footer height */
+// }
