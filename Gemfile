@@ -66,6 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # iStartUP gems installed
 # Image Upload and Hosting
-gem 'cloudinary', '~> 1.12.0'
+gem 'cloudinary', '~> 1.14.0'
 gem 'geocoder'
 
