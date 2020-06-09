@@ -1,0 +1,22 @@
+<div class="container applications">
+  <h2>Your sent applications</h2>
+  <p style="color: #52A87C" >______________________________________</p>
+  <!-- started applications -->
+  <div class="card-grid-applications">
+    <% @started_applications.each do |startup| %>
+    <div class="card-applications">
+      <i class="fas fa-file"></i>
+      <h6><%= startup.name %></h6>
+    </div>
+    <% end %>
+    <!-- sent applications -->
+    <div class="card-grid-applications">
+      <% @sent_applications.each do |application| %>
+      <div class="card-applications">
+        <i class="fas fa-file"></i>
+        <h6><%= application.startup.name %></h6>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

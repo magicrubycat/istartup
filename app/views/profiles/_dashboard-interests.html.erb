@@ -1,0 +1,20 @@
+<div class="container interests">
+  <h2>You are interested in</h2>
+  <p style="color: #52A87C" >______________________________________</p>
+  <div class="card-grid-interests">
+    <div class="card-interests">
+      <div class= "card-logo-interests">
+        <i class="fas fa-first-aid fa-3x"></i>
+<!--         <i class="<sector.sector_icon_font %> fa-3x"></i>
+        <i class="<= startup.sector_icon_font %> fa-3x"></i> -->
+      </div>
+      <h6>
+        <ul>
+          <% @interests.each do |interest| %>
+          <li> <%= interest.name %> </li>
+          <% end %>
+        </ul>
+      </h6>
+    </div>
+  </div>
+</div>
