@@ -19,10 +19,10 @@ def photo_nil_prevention(string)
   string
 end
 
-# Application.delete_all
-# StartupSector.delete_all
-# Sector.delete_all
-# Startup.delete_all
+Application.delete_all
+StartupSector.delete_all
+Sector.delete_all
+Startup.delete_all
 file = File.read(Rails.root.join('./db/data/startups.json'))
 json_hash = JSON.parse(file)
 
@@ -42,15 +42,20 @@ json_hash["startups"].each do |startup|
 
   puts "Creating the Sector"
 
-  sector = Sector.create(
-    name: nil_prevention(startup[1]["sector"]),
-    sector_icon_font: nil_prevention(startup[1]["sector_icon_font"])
-  )
+  sector_name = nil_prevention(startup[1]["sector"])
+  sector = Sector.find_by(name: sector_name)
+  if sector.nil?
+    sector = Sector.create(
+      name: sector_name,
+      sector_icon_font: nil_prevention(startup[1]["sector_icon_font"])
+    )
+  end
+
 
   puts "Creating the StartupSector"
 
   StartupSector.create(
     startup_id: startup_creation.id,
-    sector_id: startup_creation.id
+    sector_id: sector.id
   )
 end
