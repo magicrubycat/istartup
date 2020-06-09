@@ -5,6 +5,15 @@ html, body {
   font-family: Abel, Arial, Verdana, sans-serif;
 }
 
+.startup-logo {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+
+
 .center {
   position: absolute;
   top: 50%;
@@ -81,19 +90,19 @@ html, body {
 
 .card .additional .startup-card-index .level,
 .card .additional .startup-card-index .sectors {
-  top: 15%;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  font-weight: bold;
-  background: rgba(0,0,0,0.15);
-  padding: 0.125rem 0.75rem;
-  border-radius: 100px;
-  white-space: nowrap;
+  // top: 15%;
+  // color: #fff;
+  // text-transform: uppercase;
+  // font-size: 0.75em;
+  // font-weight: bold;
+  // background: rgba(0,0,0,0.15);
+  // padding: 0.125rem 0.75rem;
+  // border-radius: 100px;
+  // white-space: nowrap;
 }
 
 .card .additional .startup-card-index .sectors {
-  top: 85%;
+  top: 50%;
 }
 
 .card .additional .startup-card-index svg {
