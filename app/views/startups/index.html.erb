@@ -18,8 +18,8 @@
         <div class="card-codepen position-relative">
           <%= link_to startup_path(startup) do %>
           <%= render 'startups/card-startup-index', startup: startup, name: startup.name.capitalize, address: startup.address.capitalize, email: startup.email, website: startup.website, description: startup.description.capitalize %>
+          <% end %>
         </div>
-        <% end %>
       <% end %>
     </div>
   </div>

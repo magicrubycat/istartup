@@ -1,4 +1,4 @@
-<div class="container d-flex show">
+<div class="container d-flex show" style= "height:100vh">
   <div class="container card-startup-details">
     <div class="container">
       <div class="d-flex">
@@ -21,14 +21,16 @@
       <p> ✉️   <%= @startup.email %> </p>
       <p> 📍   <%= @startup.address %> </p>
 <!-- BUTTONS  -->
-      <% if current_user.applications.where(startup_id: @startup.id)%>
-        <%= link_to 'View application', application_path(current_user.applications), class: "btn btn-ghost" %>
-      <% else %>
-        <%= simple_form_for [@startup, @application] do |f| %>
-          <%= hidden_field_tag "application[startup_id]", @startup.id %>
-          <%= f.button :submit, class: "btn btn-ghost", style: "margin-bottom: 10px" %>
-        <% end %>
+
+    <% if current_user.application_for(@startup) %>
+        <%= link_to 'View application', application_path(current_user.application_for(@startup)), class: "btn btn-ghost" %>
+    <% else %>
+      <%= simple_form_for [@startup, @application] do |f| %>
+        <%= hidden_field_tag "application[startup_id]", @startup.id %>
+        <%= f.button :submit, class: "btn btn-ghost", style: "margin-bottom: 10px" %>
       <% end %>
+    <% end %>
+
       <%= link_to "Back to all startups", startups_path, class: "btn btn-outline-primary btn-sm" %>
     </div>
   </div>

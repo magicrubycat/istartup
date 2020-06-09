@@ -1,6 +1,8 @@
-<div class="container">
-  <h2>Welcome to your Dashboard!</h2>
+<%= render 'dashboard-banner' %>
 
+<div class="container">
+
+<<<<<<< HEAD
   <div class="container box">
     <h4>You are interested in</h4>
     <div class="card-grid-interests">
@@ -20,25 +22,15 @@
       <%= link_to "Edit interests", sectors_path %> -->
     </div>
   </div>
+=======
+<%= render 'dashboard-interests' %>
+>>>>>>> master
 
-  <div class="container">
-    <h4>Your favorite companies</h4>
-    <div>
-      <div class="card-favorites">
-        <% @favorites.each do |favorite| %>
-          <div class="card-favorites-infos mt-4">
-            <h2> <%= link_to favorite.name.capitalize, startup_path(favorite) %></h2>
-             <p> <% favorite.sectors.each do |sector| %> </p>
-                <p><%= sector.name.capitalize %> </p>
-              <% end %>
-            <p>📍Address: <%= favorite.address %> </p>
-          </div>
-       <% end %>
-      </div>
-    </div>
-  </div>
+<%= render 'dashboard-favorites' %>
 
+<%= render 'dashboard-applications' %>
 
+<<<<<<< HEAD
 <div class="container applications">
   <h4>Your sent applications</h4>
   <div class="card-grid-applications">
@@ -69,4 +61,11 @@
   <% @sent_applications.each do |application| %>
     <%= application.startup.name %>
     <% end %>
+=======
+>>>>>>> master
 </div>
+
+<!--
+index.scss
+@import "dashboard-banner"
+ -->
