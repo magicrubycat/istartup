@@ -16,8 +16,10 @@
       <% end %>
     </div>
   </div>
-    <div style= "align-items=center">   
-      <%= link_to "Submit your application", sent_application_path(@application), method: :patch, class: "btn btn-outline-primary" %>     
+    <div style= "align-items=center">
+      <%= link_to "", sent_application_path(@application), method: :patch, id: "delete-link", class: "hidden" %>
+      <button id="sweet-alert-demo" class="btn btn-outline-primary">Submit your application</button>
+      <%#= link_to "", flat_path(@flat), method: :delete, id: "delete-link", class: "hidden" %>
       <%= link_to "Edit your application", edit_application_path, class: "btn btn-outline-primary" %>
     </div>
 </div>
