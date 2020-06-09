@@ -15,4 +15,8 @@ class User < ApplicationRecord
   has_many :sectors, through: :user_sectors
   has_many :startups_as_applicant, through: :applications, source: :startup
   has_many :startups_as_lover, through: :favorites, source: :startup
+
+  def application_for(startup)
+    applications.find { |application| application.startup_id == startup.id }
+  end
 end
