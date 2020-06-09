@@ -22,7 +22,7 @@
       <p> 📍   <%= @startup.address %> </p>
 <!-- BUTTONS  -->
 
-    <% if current_user.application_for(@startup) %>
+    <% if user_signed_in? && current_user.application_for(@startup) %>
         <%= link_to 'View application', application_path(current_user.application_for(@startup)), class: "btn btn-ghost" %>
     <% else %>
       <%= simple_form_for [@startup, @application] do |f| %>
