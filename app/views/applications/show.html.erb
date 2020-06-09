@@ -11,14 +11,14 @@
       <% else %>
         <%= simple_form_for @application, url: application_path(@application) do |f| %>
           <%= f.input :document, as: :file, class: "btn btn-outline-primary" %>
-          <%= f.button :submit, "Attach document", class: "btn btn-ghost" %>
+          <%= f.button :submit, "Attach document", class: "btn btn-outline-primary" %>
         <% end %>
       <% end %>
     </div>
   </div>
-    <div style= "align-items=center">
-      <%= link_to "Edit your Application", edit_application_path %>
-      <%= link_to "Submit your application", sent_application_path(@application), method: :patch, class: "btn btn-outline-primary", style: "align-items: center" %>
+    <div style= "align-items=center">   
+      <%= link_to "Submit your application", sent_application_path(@application), method: :patch, class: "btn btn-outline-primary" %>     
+      <%= link_to "Edit your application", edit_application_path, class: "btn btn-outline-primary" %>
     </div>
 </div>
 

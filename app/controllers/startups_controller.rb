@@ -10,6 +10,10 @@ class StartupsController < ApplicationController
       @startups = Startup.all
       # @startups = @startups.select { |startup| startup.sector_ids.include?(params[:sector_id].to_i) }
     end
+    if params[:search].present?
+      @startups = Startup.search_by_all_attributes("%#{params[:search][:query]}%")
+    else
+      @startups = Startup.all
   end
 
   def show
@@ -22,5 +26,6 @@ class StartupsController < ApplicationController
         lat: @startup.latitude,
         lng: @startup.longitude
       }]
+    end
   end
 end
