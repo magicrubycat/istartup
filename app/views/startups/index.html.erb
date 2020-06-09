@@ -1,9 +1,18 @@
 <div class="container" style= "margin-top: 30px">
   <div class="container box-card-index">
     <h2 style="color:#50A87C;">Your chosen interests:</h2>
+    <div class="d-flex box-card-sectors">
     <% current_user.sectors.each do |sector| %>
-    <%= sector.name %>
+    <div class="card-interests">
+      <div class= "card-logo-interests">
+        <i class="<%= sector.sector_icon_font %>"></i>
+        <div>
+          <h3><%= sector.name %></h3>
+        </div>
+      </div>
+    </div>
     <% end %>
+    </div>
   </div>
   <div class="container box-card-index">
     <h3>Here are <%= @startups.count %> startups matching your interests:</h3>
@@ -22,7 +31,7 @@
       <% @startups.each do |startup| %>
         <div class="card-codepen position-relative">
           <%= link_to startup_path(startup) do %>
-          <%= render 'startups/card-startup-index', startup: startup, name: startup.name.capitalize, address: startup.address.capitalize, email: startup.email, website: startup.website, description: startup.description.capitalize %>
+          <%= render 'startups/card-startup-index', startup: startup, name: startup.name.capitalize, address: startup.address.capitalize, email: startup.email, website: startup.website, description: startup.description.capitalize, employees: startup.employees, logo_url: startup.logo_url %>
           <% end %>
         </div>
       <% end %>
