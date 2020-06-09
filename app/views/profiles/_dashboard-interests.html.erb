@@ -1,19 +1,20 @@
 <div class="container interests">
-    <h4>You are interested in</h4>
-    <div class="card-grid-interests">
-      <div class="card-interests">
-        <div class= "card-logo-interests">
-          <i class="fas fa-first-aid fa-3x"></i>
-        </div>
-        <h6>
-          <ul>
-            <% @interests.each do |interest| %>
-            <li> <%= interest.name %> </li>
-            <% end %>
-          </ul>
-        </h6>
+  <h2>You are interested in</h2>
+  <p style="color: #52A87C" >______________________________________</p>
+  <div class="card-grid-interests">
+    <div class="card-interests">
+      <div class= "card-logo-interests">
+        <i class="fas fa-first-aid fa-3x"></i>
+<!--         <i class="<sector.sector_icon_font %> fa-3x"></i>
+        <i class="<= startup.sector_icon_font %> fa-3x"></i> -->
       </div>
-<!--       <a class="btn btn-ghost btn-sm"></a>
-      <%= link_to "Edit interests", sectors_path %> -->
+      <h6>
+        <ul>
+          <% @interests.each do |interest| %>
+          <li> <%= interest.name %> </li>
+          <% end %>
+        </ul>
+      </h6>
     </div>
   </div>
+</div>

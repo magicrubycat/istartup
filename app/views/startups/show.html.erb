@@ -16,13 +16,12 @@
       <% @startup.sectors.each do |sector| %>
       <p> <strong>Sector:</strong> <%= sector.name.capitalize %> </p>
       <% end %>
-
       <p><strong>Details:</strong> <%= @startup.description %> </p>
       <a href="<%= @startup.website %>" style="color:#52A87C; font-size:large"> <%= @startup.website %> </a>
       <p> ✉️   <%= @startup.email %> </p>
       <p> 📍   <%= @startup.address %> </p>
-
 <!-- BUTTONS  -->
+
     <% if current_user.application_for(@startup) %>
         <%= link_to 'View application', application_path(current_user.application_for(@startup)), class: "btn btn-ghost" %>
     <% else %>
@@ -36,7 +35,6 @@
 
     </div>
   </div>
-
  <div class="container">
   <div class="col col-lg-12">
       <div id="map" class="z-depth-1-half map-container-6" style="height: 600px; margin-top:50px"
