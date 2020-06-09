@@ -4,6 +4,7 @@
   root to: 'pages#home'
 
   get 'dashboard', to: 'profiles#dashboard', as: :dashboard
+  patch '/applications/:id/sent_application', to: 'applications#sent_application', as: :sent_application
 
   resources :startups, only: [ :index, :show ] do
     resources :applications, only: [ :new, :create ]

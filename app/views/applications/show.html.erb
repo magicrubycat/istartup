@@ -16,11 +16,12 @@
       <% end %>
     </div>
   </div>
-    <div style= "align-items=center">
-      <%= link_to "Submit your application", startup_path, class: "btn btn-ghost" %>
+    <div style= "align-items=center">   
+      <%= link_to "Submit your application", sent_application_path(@application), method: :patch, class: "btn btn-outline-primary" %>     
       <%= link_to "Edit your application", edit_application_path, class: "btn btn-outline-primary" %>
     </div>
 </div>
+
 
 <!--  < cl_image_tag("#{@application.document.key}.pdf") %> -->
 
