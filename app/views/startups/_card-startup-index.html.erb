@@ -85,7 +85,7 @@
     </div>
     <div class="general">
       <h1><%= name %></h1>
-      <p><%= description %></p>
+      <p><%= truncate(description, length: 170) %></p>
       <span class="more"><i class="fas fa-users" style="color: gray"></i></span>
     </div>
   </div>
