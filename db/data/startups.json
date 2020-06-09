@@ -1,0 +1,284 @@
+{
+  "startups": {
+    "Medwing": {
+      "description": "MEDWING is a healthcare start-up that provides opportunities to work in the healthcare sector\nMEDWING's mission is to serve as the most trusted and convenient platform for finding opportunities and working in healthcare. From temporary and permanent staffing to cross-border placements, MEDWING simplifies hiring, allowing healthcare professionals to do what they do best -- care.",
+      "address": "Rosenthaler Str. 63-64 10119 Berlin Germany",
+      "website": "https://medwing.com/DE/en/",
+      "email": "info@medwing.com",
+      "employees": 120,
+      "sector": "Health",
+      "logo": "https://startup-berlin.com/wp-content/uploads/2019/05/logo-white-quadrat.jpg",
+      "sector_icon_font": "fas fa-first-aid"
+    },
+    "Construyo": {
+      "description": "Construyo provides a holistic project management service",
+      "address": "Borsigstrasse 8 10115 Berlin Germany",
+      "website": "https://www.construyo.de/ ",
+      "email": "info@construyo.de",
+      "employees": 5000,
+      "sector": "Tech",
+      "logo": "https://i.postimg.cc/mrKXsTW2/constuyo.jpg",
+      "sector_icon_font": "fas fa-file-code"
+    },
+    "GymBeam": {
+      "description": "Manufacturer of more than 500 products of sport nutrition and functional food",
+      "address": "Gartenfelder Str. 1 13599 Berlin Germany",
+      "website": "https://gymbeam.com/",
+      "email": "info@gymbeam.com",
+      "employees": 400,
+      "sector": "Sports",
+      "logo": "https://i.postimg.cc/CMc8Bmdb/2020-06-08-14-53-21-Window.jpg",
+      "sector_icon_font": "fas fa-running"
+    },
+    "MegaZebra": {
+      "description": "Creator of social games for social gaming industry",
+      "address": "Steinsdorfstrasse 2 80538 Munich Germany",
+      "website": "http://www.megazebra.com",
+      "email": "info@megazebra.com",
+      "employees": 300,
+      "sector": "Games",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Logo-MegaZebra.jpg",
+      "sector_icon_font": "fas fa-dice"
+    },
+    "Flaregames": {
+      "description": "Mobile games publisher dedicated to unforgatable gaming experience",
+      "address": "Kaiserstrasse 146-148 76133 Karlsruhe Germany",
+      "website": "https://www.flaregames.com/",
+      "email": "info@flaregames.com",
+      "employees": 200,
+      "sector": "Games",
+      "logo": "https://pbs.twimg.com/profile_images/974206234328027136/pe0TgQNJ.jpg",
+      "sector_icon_font": "fas fa-dice"
+    },
+    "Sonnen": {
+      "description": "Produces home energy storage systems for private households and small businesses",
+      "address": "Am Riedbach 1 87499 Wildpoldsried Germany",
+      "website": "https://sonnen.de/",
+      "email": "info@sonnen.com",
+      "employees": 150,
+      "sector": "Climate Change",
+      "logo": "http://solarbuildermag.com/wp-content/uploads/2016/01/Sonnen-battery.jpg",
+      "sector_icon_font": "fas fa-leaf"
+    },
+    "Teleclinic": {
+      "description": "Online emedicine platform. Users can request for a video consultation or phone call across a range of common medical topics",
+      "address": "St.-Martin-Strasse 61 81669 Munich Germany",
+      "website": "https://www.teleclinic.com/",
+      "email": "kundenservice@teleclinic.com ",
+      "employees": 600,
+      "sector": "Health",
+      "logo": "https://1.cms.s81c.com/sites/default/files/case-studies/TeleClinic_Logo_01.jpg",
+      "sector_icon_font": "fas fa-first-aid"
+    },
+    "Eyem": {
+      "description": "Revolutionizes the way professional photographers take, edit, and sell their photos",
+      "address": "Kohlfurter Str. 41/43 10999 Berlin Germany",
+      "website": "https://www.eyeem.com/",
+      "email": "info@eyeem.com",
+      "employees": 700,
+      "sector": "Photography",
+      "logo": "http://polab.it/srl/wp-content/uploads/2016/04/logo-eyEM-500x500-senza-payoff.jpg",
+      "sector_icon_font": "fas fa-camera"
+    },
+    "FreightHub": {
+      "description": "Trying to radically change and improve the way international freight is managed.",
+      "address": "Saarbrücker Str. 38 10405 Berlin Germany",
+      "website": "https://forto.com/de/",
+      "email": "info@forto.com",
+      "employees": 1200,
+      "sector": "Mobility",
+      "logo": "https://pbs.twimg.com/profile_images/741214984542277632/8NHPlpMr.jpg",
+      "sector_icon_font": "fas fa-subway"
+    },
+    "Wire": {
+      "description": "Modern day collaboration meets the most advanced security and superior user experience.",
+      "address": "Rosenthaler Str. 40-41 10178 Berlin Germany",
+      "website": "https://wire.com/",
+      "email": "jobs@wire.com",
+      "employees": 800,
+      "sector": "Tech",
+      "logo": "https://pbs.twimg.com/profile_images/707915387313254400/qdcGvj22.jpg",
+      "sector_icon_font": "fas fa-file-code"
+    },
+    "Nyris": {
+      "description": "At nyris we give search the power of sight.",
+      "address": "Warschauer Str. 58a 10243 Berlin Germany",
+      "website": "https://nyris.io/",
+      "email": "hi@nyris.io",
+      "employees": 900,
+      "sector": "Tech",
+      "logo": "https://www.yourbrand.com/images/nyris.jpg",
+      "sector_icon_font": "fas fa-file-code"
+    },
+    "N26": {
+      "description": "N26 offers mobile banking solutions to customers in the European Union. It provides international money transfer, investment, overdraft, and cash withdrawal and deposit at stores. \nAs an emerging fintech company, it provides mobile banking services by offering services that include making and handling of current accounts, fixed accounts, and other banking services, letting customers manage and control their banking details via a smartphone application easily.",
+      "address": "Klosterstraße 62, 10179 Berlin Germany",
+      "website": "https://n26.com/en-eu",
+      "email": "Imprint@n26.com",
+      "employees": 300,
+      "sector": "Financial",
+      "logo": "https://www.rbb888.de/content/dam/rbb/ach/N26-Logo.jpg.jpg/rendition=cq5dam.web.1280.1280.jpeg/size=320x180.jpg",
+      "sector_icon_font": null
+    },
+    "DeliveryHero": {
+      "description": "Delivery Hero is one of the leading global online food ordering and delivery marketplaces. We process millions of orders per day, partnering with over 500,000 restaurants and a fleet of fantastic riders.",
+      "address": "Oranienburger Straße 7010117 Berlin Germany",
+      "website": "https://www.deliveryhero.com/",
+      "email": "moc.orehyreviled@ofni",
+      "employees": 2000,
+      "sector": "Food",
+      "logo": "https://www.itespresso.es/wp-content/uploads/2017/06/delivery_hero-3.jpg",
+      "sector_icon_font": null
+    },
+    "Omio": {
+      "description": "Omio is a multi-mode search tool that compares and combines rail, air, bus, and car for European destinations. It is designed to suggest nearby airports and train routes to connect up where they would like to go and also estimating the entire length of travel time.\nOmio also makes it easier to visualize which routes are better and compare the cost of different travel options, displaying a comparative chart based on what is the cheapest or fastest. It is designed for helping travelers make longer distance travel plans.",
+      "address": "Schönhauser Allee 180, 10119 Berlin, Germany",
+      "website": "https://www.omio.com/",
+      "email": "info@omio.com",
+      "employees": 5000,
+      "sector": "Travel",
+      "logo": "https://i.ytimg.com/vi/k9sbu185BQo/maxresdefault.jpg",
+      "sector_icon_font": null
+    },
+    "SoundCloud": {
+      "description": "SoundCloud is a social sound platform where anyone can create and share sounds. It allows people to discover and enjoy the largest selection of music from the world’s most diverse creator community. This is made possible by an open platform that directly connects creators and their fans across the globe. Sound creators can use the platform to instantly record, upload, and share sounds across the internet, as well as receive detailed stats and feedback from the SoundCloud community.",
+      "address": "Rheinsberger Str. 76/77, 10115 Berlin Germany",
+      "website": "www.soundcloud.com/",
+      "email": "contact@soundcloud.com",
+      "employees": 350,
+      "sector": "Music",
+      "logo": "https://assets.wired.com/photos/w_1200/wp-content/uploads/2016/02/Soundcloud-icon-2.jpg",
+      "sector_icon_font": null
+    },
+    "HelloFresh": {
+      "description": "the leading global provider of fresh food at home. The company aims to provide each and every household in 12 markets with the opportunity to enjoy wholesome, home-made meals with no preparing, no shopping and no hassle.\n\nEverything required for delicious meals every day is carefully planned, carefully sourced and delivered to the front door of each subscriber at the time most convenient for them.",
+      "address": "Max-Planck Stasse 104 Berlin Germany",
+      "website": "https://www.hellofresh.de/",
+      "email": "kundenservice@hellofresh.de.",
+      "employees": 400,
+      "sector": "Food",
+      "logo": "https://cdn.influenster.com/media/product/image/hellofresh-main.jpg.800x400_q85ss0_background-%23FFFFFF_progressive.jpg",
+      "sector_icon_font": null
+    },
+    "TIER": {
+      "description": "On a trip to San Diego in 2017, Lawrence Leuschner spotted how electronic scooters had upended the way people got around the city. A year later, he and TIER co-founders Matthias Laug and Julian Blessin had TIER’s first e-scooters docked in European cities. Now they’re in 36 cities across 10 European countries – though due to challenges with regulation for the e-scooter sector, it only launched in Germany in June 2019. The company is growing faster than better-known peers such as Bird and Lime, with more than eight million rides notched up by April 2019 – success that has attracted €32.4 million in funding",
+      "address": "Eichhornstraße 3, 10785 Berlin, Germany",
+      "website": "https://www.tier.app/",
+      "email": "info@tier.de",
+      "employees": 1200,
+      "sector": "Mobility",
+      "logo": "http://www.finsmes.com/wp-content/uploads/2018/10/tier-300x300.jpg",
+      "sector_icon_font": null
+    },
+    "Rasa": {
+      "description": "With offices in Berlin and San Francisco, Rasa is reinventing the chatbot market – as investors have recognised, ploughing $14 million into the firm. Founders Alex Weidauer and Alan Nichol met at Cambridge University. “We’re building the standard infrastructure layer for conversational AI that allows all makers to create the best text- and voice-based AI assistants,” they say.",
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 5000,
+      "sector": "Tech",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "Klima.Metrix": {
+      "description": null,
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 500,
+      "sector": "Climate Change",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "Veritas Entertainment": {
+      "description": null,
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 7000,
+      "sector": "Games",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "HealthyCell": {
+      "description": "HealthyCell is a digital health startup. Their diverse team is driven by a desire to use technology, data, and design to have a positive impact on the lives of people living with chronic disease. \n\nThey build privacy-focused applications that empower people living with chronic disease to track their health. They're working with leading research institutions on clinical studis in complex diseases. They are winners of many awards for 'Outstanding Innovation in Digital Health'.",
+      "address": "Schönhauser Allee 97/80, 10439 Berlin, Germany",
+      "website": null,
+      "email": null,
+      "employees": 150,
+      "sector": "Health",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "Hallidai AI Gaming": {
+      "description": null,
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 8000,
+      "sector": "Media",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "Foodly": {
+      "description": null,
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 9000,
+      "sector": "Food",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "Omnicell": {
+      "description": "The World Health Organization provides the advice and evidence needed for people to lead healthy lives. Good health requires the commitment of many, from lawmakers to lunch makers. And there are steps each of us can take to promote and protect health. These include being more active, eating healthy, and avoiding tobacco and harmful use of alcohol.",
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 300,
+      "sector": "Health",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "DiaMonTech": {
+      "description": "Whether you are a seasoned health advocate or just now committing to taking the first steps in becoming more healthy, share your progress and inspire your friends and family to do the same. While you are here, take a minute to sign up to our weekly updates and we'll be in touch with more health advice and latest findings to improve your health and wellbeing.\n\nSome physical activity is better than doing none. By being more active throughout the day in relatively simple ways, people can quite easily achieve the recommended activity levels.",
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 500,
+      "sector": "Health",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "Beat81": {
+      "description": "A healthy diet is essential for good health and nutrition.\nIt protects you against many chronic noncommunicable diseases, such as heart disease, diabetes and cancer. Eating a variety of foods and consuming less salt, sugars and saturated and industrially-produced trans-fats, are essential for healthy diet.\nA healthy diet comprises a combination of different foods.",
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 7000,
+      "sector": "Sports",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "Doctorbox": {
+      "description": "Healthy communities rely on well-functioning ecosystems. They provide clean air, fresh water, medicines and food security. They also limit disease and stabilize the climate. But biodiversity loss is happening at unprecedented rates, impacting human health worldwide, according to a state of knowledge report jointly published by the Convention on Biological Diversity (CBD) and the World Health Organization.\n\nBiodiversity underpins all life on Earth, and refers to biological variety in all its forms, from the genetic make up of plants an animals to cultural diversity.",
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 2500,
+      "sector": "Health",
+      "logo": null,
+      "sector_icon_font": null
+    },
+    "SIRPLUS": {
+      "description": "There is growing concern about the health consequences of biodiversity loss. Biodiversity changes affect ecosystem functioning and significant disruptions of ecosystems can result in life sustaining ecosystem goods and services. Biodiversity loss also means that we are losing, before discovery, many of nature's chemicals and genes, of the kind that have already provided humankind with enormous health benefits.",
+      "address": null,
+      "website": null,
+      "email": null,
+      "employees": 6000,
+      "sector": "Food",
+      "logo": null,
+      "sector_icon_font": null
+    }
+  }
+}
