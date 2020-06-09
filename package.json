@@ -12,7 +12,6 @@
     "mapbox-gl": "^1.10.1",
     "places.js": "^1.19.0",
     "popper.js": "^1.16.1",
-    "puppeteer": "^3.3.0",
     "sweetalert": "^2.1.2",
     "turbolinks": "^5.2.0"
   },
