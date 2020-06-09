@@ -1,18 +1,15 @@
 class ApplicationsController < ApplicationController
-  before_action :set_application, only: [:show, :edit, :update, :destroy]
+  before_action :set_application, only: [:show, :edit, :sent_application, :update, :destroy]
 
   def index
     @applications = Application.where(user_id: current_user.id)
   end
 
-  def show
-    p @application
-  end
+  def show; end
 
   def create
     @application = Application.new(application_params)
     @application.user = current_user
-    @application.content = @application.content
     redirect_to application_path(@application) if @application.save
   end
 
@@ -24,6 +21,11 @@ class ApplicationsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def sent_application
+    @application[:sent] = true
+    redirect_to dashboard_path if @application.save
   end
 
   def destroy

@@ -18,9 +18,10 @@
   </div>
     <div style= "align-items=center">
       <%= link_to "Edit your Application", edit_application_path %>
-      <%= link_to "Submit your application", class: "btn btn-outline-primary", style: "align-items: center" %>
+      <%= link_to "Submit your application", sent_application_path(@application), method: :patch, class: "btn btn-outline-primary", style: "align-items: center" %>
     </div>
 </div>
+
 
 <!--  < cl_image_tag("#{@application.document.key}.pdf") %> -->
 
