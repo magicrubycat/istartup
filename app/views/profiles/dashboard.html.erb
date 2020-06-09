@@ -1,8 +1,6 @@
 <%= render 'dashboard-banner' %>
 
 <div class="container">
-
-<<<<<<< HEAD
   <div class="container box">
     <h4>You are interested in</h4>
     <div class="card-grid-interests">
@@ -22,48 +20,13 @@
       <%= link_to "Edit interests", sectors_path %> -->
     </div>
   </div>
-=======
+</div>
+
 <%= render 'dashboard-interests' %>
->>>>>>> master
 
 <%= render 'dashboard-favorites' %>
 
 <%= render 'dashboard-applications' %>
-
-<<<<<<< HEAD
-<div class="container applications">
-  <h4>Your sent applications</h4>
-  <div class="card-grid-applications">
-    <div class="card-applications">
-      <i class="fas fa-file"></i>
-      <h6>Flaregames</h6>
-    </div>
-    <div class="card-applications">
-      <i class="fas fa-file"></i>
-      <h6>Teleclinic</h6>
-    </div>
-    <div class="card-applications">
-      <i class="fas fa-file"></i>
-      <h6>Sonnen</h6>
-    </div>
-    <div class="card-applications">
-      <i class="fas fa-file"></i>
-      <h6>GymBeam</h6>
-    </div>
-    <!-- started applications -->
-    <% @started_applications.each do |startup| %>
-    <%= startup.name %>
-    <% end %>
-
-    <!-- started applications -->
-
-  </div>
-  <% @sent_applications.each do |application| %>
-    <%= application.startup.name %>
-    <% end %>
-=======
->>>>>>> master
-</div>
 
 <!--
 index.scss
