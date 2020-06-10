@@ -4,11 +4,11 @@
     <div class="card-favorites">
       <% @favorites.each do |favorite| %>
         <div class="card-favorites-infos mt-4">
-          <h2> <%= link_to favorite.name.capitalize, startup_path(favorite) %></h2>
+          <h3> <%= link_to favorite.name.capitalize, startup_path(favorite) %></h3>
            <p><% favorite.sectors.each do |sector| %> </p>
               <p>Sector: <%= sector.name.capitalize %> </p>
             <% end %>
-          <p>📍Address: <%= favorite.address %> </p>
+          <p><i class="fas fa-map-pin"></i> Address: <%= favorite.address %> </p>
         </div>
       <% end %>
     </div>
