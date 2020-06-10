@@ -17,7 +17,6 @@
   </div>
   <% end %>
   <div class="container box-card-index">
-    <h3>Here are <%= @startups.count %> startups matching your interests:</h3>
     <div>
       <%= simple_form_for :search, url: startups_path, method: :get do |f| %>
       <div class="search-form-control form-group">
@@ -28,6 +27,7 @@
       </div>
       <% end %>
     </div>
+    <h3>Here are <%= @startups.count %> startups matching your interests:</h3>
 
     <div class="startup-cards">
       <% @startups.each do |startup| %>
