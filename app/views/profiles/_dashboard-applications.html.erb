@@ -1,24 +1,29 @@
-<div class="container d-flex" style="background-color: white">
-  <div class="col-6">
-    <div class="app card-grid-applications">
-      <h3><i class="fas fa-save"></i> started applications</h3>
-      <% @started_applications.each do |application| %>
-      <div class="card-applications">
-        <h3><i class="fas fa-file fa-3x"></i> <%= application.startup.name %></h3>
+<div class="container applications">
+
+  <div class="container d-flex">
+    <div class="col-6">
+      <div class="app card-grid-applications">
+        <h3><i class="fas fa-save"></i> started applications</h3>
+        <% @started_applications.each do |application| %>
+        <div class="card-applications">
+          <h3><i class="fas fa-file fa-3x"></i> <%= application.startup.name %></h3>
+        </div>
+        <% end %>
       </div>
-      <% end %>
+    </div>
+
+
+    <div class="col-6">
+      <div class="app card-grid-applications">
+        <h3><i class="fas fa-share-square"></i> sent applications</h3>
+        <% @sent_applications.each do |application| %>
+        <div class="card-applications">
+          <h3><i class="fas fa-file fa-3x"></i> <%= application.startup.name %></h3>
+          <p>Applied on: 12/6/2020</p>
+        </div>
+        <% end %>
+      </div>
     </div>
   </div>
 
-
-  <div class="col-6" style="background-color: white">
-    <div class="app card-grid-applications">
-      <h3><i class="fas fa-envelope"></i> sent applications</h3>
-      <% @sent_applications.each do |application| %>
-      <div class="card-applications">
-        <h3><i class="fas fa-file fa-3x"></i> <%= application.startup.name %></h3>
-      </div>
-      <% end %>
-    </div>
-  </div>
 </div>
