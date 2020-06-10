@@ -19,7 +19,7 @@
         <% @sent_applications.each do |application| %>
         <div class="card-applications">
           <h3><i class="fas fa-file fa-3x"></i> <%= application.startup.name %></h3>
-          <p>Applied on: 12/6/2020</p>
+          <p>Applied on: <%= application.updated_at.to_date.to_formatted_s(:long) %></p>
         </div>
         <% end %>
       </div>
