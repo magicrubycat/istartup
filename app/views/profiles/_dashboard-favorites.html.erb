@@ -6,11 +6,12 @@
         <div class="card-favorites-infos mt-4">
           <h3> <%= link_to favorite.name.capitalize, startup_path(favorite) %></h3>
            <p><% favorite.sectors.each do |sector| %> </p>
-              <p>Sector: <%= sector.name.capitalize %> </p>
+              <p><%= sector.name.capitalize %> </p>
             <% end %>
           <p><i class="fas fa-map-pin"></i> Address: <%= favorite.address %> </p>
         </div>
       <% end %>
     </div>
   </div>
+    <%= link_to "Chose your favorite startups", startups_path, class:"btn btn-outline-primary" %>
 </div>

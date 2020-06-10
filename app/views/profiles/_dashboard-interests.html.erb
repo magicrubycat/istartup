@@ -1,19 +1,20 @@
 <div class="container interests">
   <h2>You are interested in</h2>
 <!--   When the fa icon column is accessible uncomment this div -->
-<div class="d-flex" style="justify-content: center">
-  <% current_user.sectors.each do |sector| %>
-  <div class="card-interests">
-    <div class= "card-logo-interests">
-      <i class="<%= sector.sector_icon_font %>"></i>
-      <div>
-        <h3><%= sector.name %></h3>
+  <div class="d-flex" style="justify-content: center">
+    <% current_user.sectors.each do |sector| %>
+    <div class="card-interests">
+      <div class= "card-logo-interests">
+        <i class="<%= sector.sector_icon_font %>"></i>
+        <div>
+          <h3><%= sector.name %></h3>
+        </div>
       </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
-  <%= link_to "Edit Interests", sectors_path, class:"btn btn-outline-primary" %>
+    <%= link_to "Edit Interests", sectors_path, class:"btn btn-outline-primary" %>
 
 
 </div>
+

@@ -16,7 +16,7 @@
   margin: auto;
   margin-bottom: 20px;
   border-radius: 3px;
-  text-align: center;
+  // text-align: center;
 }
 
 .card-grid-interests {
@@ -46,7 +46,7 @@
 .card-interests:hover {
   opacity: 0.9;
   transition: opacity 0.3s ease;
-  background-color: #72EFB1;
+  background-color: #FBFBFB;
 }
 
 .card-logo-interests {
@@ -64,10 +64,10 @@
   padding: 30px;
   margin: auto;
   margin-bottom: 20px;
-  border-radius: 3px;
+  // border-radius: 3px;
   border-top: solid 1px;
   border-bottom: solid 1px;
-  border-color: #51A87C;
+  border-color: #B0E5CB;
 }
 
 .card-favorites {
@@ -82,7 +82,7 @@
 .card-favorites-infos:hover {
   opacity: 0.9;
   transition: opacity 0.3s ease;
-  background-color: #72EFB1;
+  background-color: #FBFBFB;
 }
 .card-favorites img {
   height: 100%;
@@ -141,7 +141,7 @@
 .card-applications:hover {
   opacity: 0.9;
   transition: opacity 0.3s ease;
-  background-color: #72EFB1;
+  background-color: #FBFBFB;
 }
 
 .card-applications {
