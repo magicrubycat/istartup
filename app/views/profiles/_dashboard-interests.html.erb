@@ -1,6 +1,7 @@
 <div class="container interests">
   <h2>You are interested in</h2>
-<!--   When the fa icon column is accessible uncomment this div -->
+<!-- MAYBE TODO -->
+<!-- If there are no elements in @sectors saved for the current user, display "You have not chosen any interests yet. -->
   <div class="d-flex" style="justify-content: center">
     <% current_user.sectors.each do |sector| %>
     <div class="card-interests">
