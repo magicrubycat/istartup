@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
   def dashboard
     @favorites = current_user.startups_as_lover
     @interests = current_user.sectors
-    @started_applications = current_user.startups_as_applicant
+    @started_applications = current_user.applications.where(sent: false)
     @sent_applications = current_user.applications.where(sent: true)
   end
 

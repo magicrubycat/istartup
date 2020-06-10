@@ -1,70 +1,21 @@
 <div class="container interests">
   <h2>You are interested in</h2>
-  <p style="color: #52A87C" >______________________________________</p>
-
-<!--   When the fa icon column is accessible uncomment this div -->
-<!--   <div class="card-grid-interests">
-    <% @interests.each do |interest| %>
+<!-- MAYBE TODO -->
+<!-- If there are no elements in @sectors saved for the current user, display "You have not chosen any interests yet. -->
+  <div class="d-flex" style="justify-content: center">
+    <% current_user.sectors.each do |sector| %>
     <div class="card-interests">
       <div class= "card-logo-interests">
-        <i class="<%= startup.sector_icon_font %> fa-3x"></i>
+        <i class="<%= sector.sector_icon_font %>"></i>
+        <div>
+          <h3><%= sector.name %></h3>
+        </div>
       </div>
-      <h6>
-        <%= interest.name %>
-      </h6>
+    </div>
     <% end %>
-    </div>
-  </div> -->
-
-<!-- Static card for design process, when the connection to the seed file is working,
-this divs "card-grid-interests" can be deleted -->
-  <div class="card-grid-interests">
-    <div class="card-interests">
-      <div class= "card-logo-interests">
-        <i class="fas fa-piggy-bank fa-3x"></i>
-        <div>
-          <h3>Financial</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-interests">
-      <div class= "card-logo-interests">
-        <i class="fas fa-cookie-bite fa-3x"></i>
-        <div>
-          <h3>Food</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-interests">
-      <div class= "card-logo-interests">
-        <i class="fas fa-dice fa-3x"></i>
-        <div>
-          <h3>Games</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-interests">
-      <div class= "card-logo-interests">
-        <i class="fas fa-first-aid fa-3x"></i>
-        <div>
-          <h3>Healthcare</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-interests">
-      <div class= "card-logo-interests">
-        <i class="fas fa-first-aid fa-3x"></i>
-        <div>
-          <h3>Healthcare</h3>
-        </div>
-      </div>
-    </div>
-
   </div>
-<!-- End of static content for design process -->
+    <%= link_to "Edit Interests", sectors_path, class:"btn btn-outline-primary" %>
+
 
 </div>
+
