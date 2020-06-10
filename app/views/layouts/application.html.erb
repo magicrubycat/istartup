@@ -15,15 +15,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
-    <div class="flex-column">
-      <%= render 'shared/navbar' %>
-      <%= render 'shared/flashes' %>
+    <body>
+      <div id="page-container">
+        <%= render 'shared/navbar' %>
+        <%= render 'shared/flashes' %>
 
-      <div class="page-content">
-      <%= yield %>
-      </div>
-      <%= render 'shared/footer' %>
+        <div class="content-wrap">
+          <%= yield %>
+        </div>
+        <%= render 'shared/footer' %>
     </div>
   </body>
 </html>
