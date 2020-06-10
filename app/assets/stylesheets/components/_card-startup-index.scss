@@ -25,7 +25,7 @@ html, body {
 }
 
 .card {
-  width: 700px;
+  width: 800px;
   height: 200px;
   background-color: #fff;
   background: linear-gradient(#f8f8f8, #fff);
@@ -110,8 +110,8 @@ html, body {
 }
 
 .card .additional .more-info {
-  width: 470px;
-  float: left;
+  width: 320px;
+  float: right;
   position: absolute;
   left: 150px;
   height: 100%;
@@ -183,7 +183,7 @@ html, body {
 
 .card .general {
   margin-top: 15px;
-  width: 470px;
+  width: 560px;
   height: 100%;
   position: absolute;
   top: 0;
