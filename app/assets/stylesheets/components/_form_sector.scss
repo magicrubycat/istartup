@@ -1,6 +1,5 @@
 .form-sector {
   background: white;
-  margin-top: 50px;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
@@ -54,6 +53,17 @@
   color: white;
   opacity: 1;
   background-color: #51A87C;
+  }
+}
+
+.icon-sectors-card {
+  &.active {
+    background-color: white;
+    color: white;
+  }
+  &:hover {
+    background-color: white;
+    color: white;
   }
 }
 
