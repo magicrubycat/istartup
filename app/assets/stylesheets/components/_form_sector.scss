@@ -55,6 +55,9 @@
   opacity: 1;
   background-color: #51A87C;
   }
+  &.active i {
+    color: white;
+  }
 }
 
 // change the background colour in ACTIVE
