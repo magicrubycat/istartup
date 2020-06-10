@@ -3,7 +3,7 @@
   margin-top: 50px;
   padding: 20px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 13px;
   margin-bottom: 50px;
   h1 {
     text-align: center;
@@ -23,7 +23,8 @@
 // Checkboxes design
 .category-choices {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 20px 0;
@@ -35,19 +36,24 @@
 }
 
 .category-choice {
-  background: #e5e5e5;
+  background: #fbf8f8;
+  border: 2px solid #fbf8f8;
   padding: 20px;
-  border-radius: 40px;
+  border-radius: 30px;
   opacity: 1;
   text-align: center;
   height: 180px;
   width: 180px;
   margin: 30px;
   margin-bottom: 30px;
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
   &:hover {
     opacity: .4;
     cursor: pointer;
     background-color: #52A87C;
+  }
+  &:hover i {
+  color: white;
   }
   &.active {
   background-color: $green;
@@ -55,6 +61,10 @@
   opacity: 1;
   background-color: #51A87C;
   }
+  &.active i {
+  color: white;
+  }
 }
+
 
 // change the background colour in ACTIVE
