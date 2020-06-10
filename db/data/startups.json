@@ -19,7 +19,7 @@
       "sector": "Food",
       "logo": "https://www.itespresso.es/wp-content/uploads/2017/06/delivery_hero-3.jpg",
       "sector_icon_font": "fas fa-cookie-bite"
-    },
+   },
     "Omio": {
       "description": "Omio is a multi-mode search tool that compares and combines rail, air, bus, and car for European destinations. It is designed to suggest nearby airports and train routes to connect up where they would like to go and also estimating the entire length of travel time.\nOmio also makes it easier to visualize which routes are better and compare the cost of different travel options, displaying a comparative chart based on what is the cheapest or fastest. It is designed for helping travelers make longer distance travel plans.",
       "address": "Schönhauser Allee 180, 10119 Berlin, Germany",
@@ -177,7 +177,7 @@
       "email": "info@freighthub.com",
       "employees": 120,
       "sector": "Travel",
-      "logo": "https://pbs.twimg.com/profile_images/741214984542277632/8NHPlpMr.jpg",
+      "logo": "https://media.glassdoor.com/sqll/1654036/freighthub-squarelogo-1502787686462.png",
       "sector_icon_font": "fas fa-plane-departure"
     },
     "Nyris": {
@@ -380,6 +380,128 @@
       "logo": "https://www.logologo.com/logos/flower-logo.jpg",
       "sector_icon_font": "fas fa-first-aid"
     },
+=======
+    "AEducated": {
+      "description": "You do not learn to be a teacher merely by reading books. Moreover, there is no risk of you attending lectures for years only to discover the challenges of being a teacher afterwards, when it’s too late. As a student at a Swiss university of teacher education, you will benefit from the fact that subject knowledge and scientific approaches are combined with a strong practical orientation. Most of the professors combine an academic diploma with a teaching diploma.\nThe linking of theoretical and methodological knowledge with practical experience and reflection ensures students are thoroughly prepared for the challenges of the teaching profession. Interdisciplinary approaches enable the students to acquire the skills they need for teaching.",
+      "address": "Gartenfelder Str. 1, 13599 Berlin, Germany",
+      "website": "www.aeducated.com",
+      "email": "contact@info.com",
+      "employees": 80,
+      "sector": "Education",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2a/New_Logo_AD.jpg",
+      "sector_icon_font": "fas fa-chalkboard-teacher"
+    },
+    "RubyCell": {
+      "description": "Whether you are a seasoned health advocate or just now committing to taking the first steps in becoming more healthy, share your progress and inspire your friends and family to do the same. While you are here, take a minute to sign up to our weekly updates and we'll be in touch with more health advice and latest findings to improve your health and wellbeing.\n\nSome physical activity is better than doing none. By being more active throughout the day in relatively simple ways, people can quite easily achieve the recommended activity levels.",
+      "address": "Max-Beer-Straße 2, 10119 Berlin, Germany",
+      "website": "www.rubycell.com",
+      "email": "contact@info.com",
+      "employees": 250,
+      "sector": "Sports",
+      "logo": "https://pngimg.com/uploads/firefox/firefox_PNG10.png",
+      "sector_icon_font": "fas fa-running"
+    },
+    "Health100": {
+      "description": "A healthy diet is essential for good health and nutrition.\nIt protects you against many chronic noncommunicable diseases, such as heart disease, diabetes and cancer. Eating a variety of foods and consuming less salt, sugars and saturated and industrially-produced trans-fats, are essential for healthy diet.\nA healthy diet comprises a combination of different foods.",
+      "address": "Lohmühlenstraße 65, 12435 Berlin, Germany",
+      "website": "www.health100.com",
+      "email": "contact@info.com",
+      "employees": 50,
+      "sector": "Health",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/1/15/Logo_AFRO_Format_Wiki.jpg",
+      "sector_icon_font": "fas fa-first-aid"
+    },
+    "CoopHealth": {
+      "description": "Healthy communities rely on well-functioning ecosystems. They provide clean air, fresh water, medicines and food security. They also limit disease and stabilize the climate. But biodiversity loss is happening at unprecedented rates, impacting human health worldwide, according to a state of knowledge report jointly published by the Convention on Biological Diversity (CBD) and the World Health Organization.\n\nBiodiversity underpins all life on Earth, and refers to biological variety in all its forms, from the genetic make up of plants an animals to cultural diversity.",
+      "address": "Eichhornstraße 3, 10785 Berlin, Germany",
+      "website": "www.coophealth.com",
+      "email": "contact@info.com",
+      "employees": 80,
+      "sector": "Health",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5d/DOTCOOP_LOGO_RGB.jpg",
+      "sector_icon_font": "fas fa-first-aid"
+    },
+    "MePlus": {
+      "description": "There is growing concern about the health consequences of biodiversity loss. Biodiversity changes affect ecosystem functioning and significant disruptions of ecosystems can result in life sustaining ecosystem goods and services. Biodiversity loss also means that we are losing, before discovery, many of nature's chemicals and genes, of the kind that have already provided humankind with enormous health benefits.",
+      "address": "Schönhauser Allee 175, 10119 Berlin, Germany",
+      "website": "www.healthyyou.com",
+      "email": "contact@info.com",
+      "employees": 80,
+      "sector": "Health",
+      "logo": "https://slidedog.com/wp-content/uploads/Slidedog_logo-1.png",
+      "sector_icon_font": "fas fa-first-aid"
+    },
+    "Enpaly": {
+      "description": "Biodiversity provides many goods and services essential to life on earth. The management of natural resources can determine the baseline health status of a community. Environmental stewardship can contribute to secure livelihoods and improve the resilience of communities. The loss of these resources can create the conditions responsible for morbidity or mortality.\n\nBiodiversity supports human and societal needs, including food and nutrition security, energy, development of medicines and pharmaceuticals and freshwater, which together underpin good health. ",
+      "address": "Rosenthaler Str. 63-64, 10119 Berlin, Germany",
+      "website": "www.healthyyou.com",
+      "email": "contact@info.com",
+      "employees": 120,
+      "sector": "Environment",
+      "logo": "https://c2.peakpx.com/wallpaper/299/562/401/letter-d-superman-style-red-yellow-wallpaper-preview.jpg",
+      "sector_icon_font": "fas fa-leaf"
+    },
+    "GlobalZen": {
+      "description": "Land use change, pollution, poor water quality, chemical and waste contamination, climate change and other causes of ecosystem degradation all contribute to biodiversity loss and, can pose considerable threats to human health.\n\nHuman health and well-being are influenced by the health of local plant and animal communities, and the integrity of the local ecosystems that they form.",
+      "address": "Borsigstrasse 8, 10115 Berlin, Germany",
+      "website": "www.healthyyou.com",
+      "email": "contact@info.com",
+      "employees": 80,
+      "sector": "Health",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Global_Greens_logo.jpg/1024px-Global_Greens_logo.jpg",
+      "sector_icon_font": "fas fa-running"
+    },
+    "Bio&Tech": {
+      "description": "The Index Medicus for the Eastern Mediterranean Region, one of the major projects of the Virtual Health Sciences Library, was initiated in response to a pressing need to index health and biomedical journals from the Region. The vast majority of these journals are not currently indexed internationally or abstracts provided. Mapping regional health and biomedical literature will increase its exposure at national, regional and global levels. The Index Medicus is a unique tool for indexing, abstracting, recording, archiving and sharing regional health information.",
+      "address": "Gartenfelder Str. 1, 13599 Berlin, Germany",
+      "website": "www.healthmefor.com",
+      "email": "contact@info.com",
+      "employees": 250,
+      "sector": "Health",
+      "logo": "https://jobs.euractiv.com/sites/default/files/Logo_GIZ.jpg",
+      "sector_icon_font": "fas fa-first-aid"
+    },
+    "WikiConnect": {
+      "description": "It includes recommendations for individual vaccines, and also more general guidelines on technical or regulatory topics such as cell substrates, nonclinical evaluation, or clinical evaluation. This programme also establishes and distributes the WHO Biological Reference Materials required for the standardization of assays to laboratories around the world such as manufacturers and National Control Laboratories (NCLs) who are involved in the quality control of vaccines. This activity is critical to ensure the quality of essential vaccines in a global market.",
+      "address": "Max-Beer-Straße 2, 10119 Berlin, Germany",
+      "website": "www.wikiconnect.com",
+      "email": "contact@wikinfo.com",
+      "employees": 50,
+      "sector": "Education",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/7/71/VVIT_WikiConnect_Logo.jpg",
+      "sector_icon_font": "fas fa-chalkboard-teacher"
+    },
+    "Eva Health": {
+      "description": "Biosafety is the safe working practices associated with handling of biological materials, particularly infectious agents. It addresses containment principles, technologies and practices that are implemented to prevent the unintentional exposure to pathogens and toxins, or their accidental release. Responsible laboratory practices, including protection, control and accountability for valuable biological materials will help prevent their unauthorized access, loss, theft, misuse, diversion or intentional release.",
+      "address": "Lohmühlenstraße 65, 12435 Berlin, Germany",
+      "website": "www.healthmefor.com",
+      "email": "contact@info.com",
+      "employees": 200,
+      "sector": "Health",
+      "logo": "https://cdn.pixabay.com/photo/2017/05/29/09/51/smile-2353354_960_720.png",
+      "sector_icon_font": "fas fa-first-aid"
+    },
+    "Freeleticty": {
+      "description": "Standards developed through the ECBS relate to the production and quality control of safe and effective products. They provide guidance for national regulatory authorities and manufacturers and serve as the standard for acceptability of vaccines for supply to countries through international agencies (terms prequalification). Biological standards are also established by the Committee and provide the basis for the laboratory comparison of vaccines worldwide.",
+      "address": "Eichhornstraße 3, 10785 Berlin, Germany",
+      "website": "www.freeleticty.com",
+      "email": "contact@freelecty.com",
+      "employees": 80,
+      "sector": "Health",
+      "logo": "https://www.apparence.org/dtpics/immersions/ftp_immersions/inspiration_1024.jpg",
+      "sector_icon_font": "fas fa-first-aid"
+    },
+    "Inner": {
+      "description": "The World Health Organization brings together international experts in specific fields through its biological standardization programme to develop and revise specific recommendations for the production and quality control of vaccines of major international public health importance. Authoritative, harmonized guidelines and recommendations, for use by manufacturers and regulatory authorities, are published in the reports of ECBS meetings in the WHO Technical Report Series.",
+      "address": "Schönhauser Allee 175, 10119 Berlin, Germany",
+      "website": "www.healthmefor.com",
+      "email": "contact@info.com",
+      "employees": 50,
+      "sector": "Health",
+      "logo": "https://www.logologo.com/logos/flower-logo.jpg",
+      "sector_icon_font": "fas fa-first-aid"
+    },
+
     "CellmaIQ": {
       "description": "Processing blood into various types of medicines or products is a highly specialized process because blood products and biological technologies are inherently variable due to the nature of the source materials as well as the methods used to test them. The overall goal of the National Regulatory Authorities is to ensure that only blood products of demonstrated quality, safety and efficacy should be used. Yet, experience with regulatory authorities indicate that many countries have significant difficulties in fulfilling their responsibilities in this field.",
       "address": "Rosenthaler Str. 63-64, 10119 Berlin, Germany",
