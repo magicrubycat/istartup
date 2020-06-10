@@ -13,11 +13,11 @@
   </head>
 
     <body>
-      <div class="flex-column">
+      <div id="page-container">
         <%= render 'shared/navbar' %>
         <%= render 'shared/flashes' %>
 
-        <div class="page-content">
+        <div class="content-wrap">
           <%= yield %>
         </div>
         <%= render 'shared/footer' %>
