@@ -8,19 +8,21 @@
 
     <div class="container">
       <% if @application.document.attached? %>
-        <embed src="<%=cl_image_tag(@application.document.key)%>" type="pdf" width="100%" height="600px">
+       <%= cl_image_tag(@application.document.key, width: 400, height: 500, crop: :fill) %>
       <% else %>
         <%= simple_form_for @application, url: application_path(@application) do |f| %>
-          <%= f.input :document, as: :file, class: "btn btn-outline-primary", label: false%>
+          <%= f.input :document, as: :file, class: "btn btn-outline-primary", label: false, name: "Upload" %>
           <%= f.button :submit, "Attach document", class: "btn btn-outline-primary" %>
         <% end %>
       <% end %>
-      <%= link_to "Go back to #{@application.startup.name}", startup_path(@application.startup.id), class: "btn btn-outline-primary" %>
     </div>
   </div>
     <div style= "align-items=center">
+      <div class="buttons-application-show">
       <%= link_to "", sent_application_path(@application), method: :patch, id: "delete-link", class: "hidden" %>
       <button id="sweet-alert-demo" class="btn btn-ghost">Submit your application</button>
       <%= link_to "Edit your application", edit_application_path, class: "btn btn-outline-primary" %>
+      <%= link_to "Go back to #{@application.startup.name}", startup_path(@application.startup.id), class: "btn btn-outline-primary" %>
+      </div>
     </div>
 </div>
