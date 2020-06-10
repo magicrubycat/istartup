@@ -16,8 +16,8 @@
         <% Sector.all.each do |sector| %>
         <input type="checkbox" class="d-none" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>">
         <label for="user_sector_ids_<%= sector.id %>" class="category-choice">
+          <div class="icon-sectors-card"><i class="<%= sector.sector_icon_font %>"></i></div>
           <%= sector.name.capitalize %>
-          <i class="<%= sector.sector_icon_font %>"></i>
           <!-- to be updated with the right css etc.  -->
         </label>
         <% end %>
