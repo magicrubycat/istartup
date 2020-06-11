@@ -13,8 +13,9 @@
       <input type="hidden" name="user[sector_ids][]" value="">
       <div class="category-choices">
         <% Sector.all.each do |sector| %>
-        <input type="checkbox" class="d-none" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>">
-        <label for="user_sector_ids_<%= sector.id %>" class="category-choice">
+        <input type="checkbox" class="d-none" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>"<%= "checked" if@selected_selectors.include?(sector.name) %>>
+        <label for="user_sector_ids_<%= sector.id %>" class="category-choice
+          <%= "active" if@selected_selectors.include?(sector.name) %>">
           <div>
             <i class="<%= sector.sector_icon_font %>"></i>
             <p><%= sector.name.upcase %></p>

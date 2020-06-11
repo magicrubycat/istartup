@@ -7,7 +7,7 @@
       <div class="container">
         <%= render "application_content", application: @application %>
       </div>
-      <div class="container" style="text-align: center">
+      <div class="container">
         <% if @application.document.attached? %>
           <%= cl_image_tag(@application.document.key, width: 500, height: 700, crop: :fill) %>
         <% else %>
