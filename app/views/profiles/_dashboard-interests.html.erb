@@ -15,7 +15,7 @@
     </div>
     <% end %>
   </div>
-    <%= link_to "Edit Interests", sectors_path, class:"btn btn-ghost" %>
+    <%= link_to "Edit Interests", sectors_path(query: current_user.sectors.pluck(:name)), class:"btn btn-ghost" %>
 
 
 </div>

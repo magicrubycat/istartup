@@ -49,4 +49,11 @@
 
 .swal-button--confirm {
   background-color: #52A87C;
+  &:hover {
+  background-color: #52A87C;
+  }
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #52A87C !important;
 }
