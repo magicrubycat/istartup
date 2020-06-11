@@ -49,6 +49,28 @@
   margin-right: 16px
 }
 
+.dropdown-menu {
+  background-color: white;
+  color: white;
+  border-radius: 5px;
+}
+
+.dropdown-item {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 8px;
+  width: auto;
+  background-color: white;
+  color: black;
+}
+
+.dropdown-item:hover {
+  color: #52A87C !important;
+  background-color: white;
+}
+
 // ________________________________________________ commented out
 // .nav-heart {
 //   min-width: 40px;
