@@ -2,7 +2,6 @@
 <!-- <div class="col-sx-6">
   <%#= f.input :city, collection: Post::City, prompt: "Select your city" %>
 </div> -->
-
 <div class="container">
   <div class="form-sector">
     <h1 style="color:#50A87C;">Select your interests</h1>
@@ -13,8 +12,8 @@
       <input type="hidden" name="user[sector_ids][]" value="">
       <div class="category-choices">
         <% Sector.all.each do |sector| %>
-        <input type="checkbox" class="d-none" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>">
-        <label for="user_sector_ids_<%= sector.id %>" class="category-choice">
+        <input type="checkbox" value="<%= sector.id %>" class="d-none" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>" <%= "checked" if current_user.sectors.include?(sector)%>>
+          <label for="user_sector_ids_<%= sector.id %>" class="category-choice <%= "active" if current_user.sectors.include?(sector) %>">
           <div>
             <i class="<%= sector.sector_icon_font %>"></i>
             <p><%= sector.name.upcase %></p>
@@ -33,17 +32,3 @@
 </div>
 
 
-<script>
-  const sectors = document.querySelectorAll('.category-choice');
-
-const toggleActiveClass = (event) => {
-  event.currentTarget.classList.toggle('active');
-};
-
-const toggleActiveOnClick = (sector) => {
-  sector.addEventListener('click', toggleActiveClass);
-};
-
-sectors.forEach(toggleActiveOnClick);
-
-</script>
