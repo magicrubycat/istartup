@@ -102,14 +102,24 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  margin-left: 145px;
 }
 .card-favorites .card-favorites-infos {
-  border-style: solid;
-  border-width: 1px;
+  // border-style: solid;
+  // border-width: 1px;
   // border-color: #D7D7D7;
-  padding: 16px;
+  // padding: 16px;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
   background-color: #79C99E;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D7D7D7;
+  margin-left: 100px;
 }
 
 .card-favorites-infos {
@@ -118,6 +128,10 @@
   border-color: #D7D7D7;
   padding: 8px;
   background-color: white;
+  text-align: left;
+  &h3 {
+    color:white;
+  }
 }
 
 // APPLICATION CARDS
@@ -130,6 +144,7 @@
   border-radius: 3px;
   grid-gap: 16px;
   align-items: center;
+  margin-top: 45px;
 }
 
 .card-grid-applications {
