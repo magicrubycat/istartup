@@ -44,9 +44,9 @@
 }
 
 .card-interests:hover {
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-  background-color: #FBFBFB;
+  // opacity: 0.9;
+  // transition: opacity 0.3s ease;
+  // background-color: #FBFBFB;
 }
 
 .card-logo-interests {
@@ -106,10 +106,10 @@
 .card-favorites .card-favorites-infos {
   border-style: solid;
   border-width: 1px;
-  border-color: #D7D7D7;
+  // border-color: #D7D7D7;
   padding: 16px;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  background-color: #B0E5CB;
+  background-color: #79C99E;
 }
 
 .card-favorites-infos {
@@ -175,25 +175,45 @@
 .overview-applications {
   background-color: white;
   border-radius: 30px;
-  padding: 15px;
-  margin: 15px;
+  padding: 20px;
+  margin: 30px;
 }
 
 .dashboard-personal-information {
   background-color: white;
   border-radius: 30px;
   padding: 15px;
-  margin: 15px;
+  // margin: 15px;
   text-align: center;
   left:50%;
   right:50%;
+  height: 408px;
+  // width: 1000px;
 }
 
 .dashboard-flexbox1 {
   display: grid;
   grid-template-columns: 12fr 4fr;
-  grid-gap: 16px;
+  grid-gap: 10px;
   justify-content: center;
   align-items: center;
+  margin: 30px;
+}
+
+.overview-numbers {
+  margin-bottom: 10px;
+  font-size: medium;
+}
+
+.overview-applications-favorites {
+  background-color: white;
+  border-radius: 30px;
+  padding: 15px;
+  // margin: 15px;
+  text-align: center;
+  left:50%;
+  right:50%;
+  height: 408px;
+  margin-right: 20px;
 }
 

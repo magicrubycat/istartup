@@ -1,0 +1,13 @@
+<div class="dashboard-personal-information">
+  <div style="margin-bottom: 15px; margin-top: 10px"><%= render 'shared/avatar-large' %></div>
+  <div style="left:50%; right:50%; margin-bottom: 10px"><strong><%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></strong></div>
+
+  <span style="left:50%; right:50%; margin-bottom: 30px;"><i class="fas fa-map-marker-alt" style="color: #52A87C"></i> Berlin</span>
+  <div style="left:50%; right:50%; margin-bottom: 15px;"><%= link_to "Edit personal information", href="edit_profile_path", class:"btn btn-ghost" %></div>
+  <div class="overview-numbers">You have <strong style="color:#52A87C"><%= @favorites.count %></strong> favorite startups</div>
+  <div class="overview-numbers">You have <strong style="color:#52A87C"><%= @started_applications.count %></strong> applications in progress</div>
+  <div class="overview-numbers">You have <strong style="color:#52A87C"><%= @sent_applications.count %></strong> applications pending</div>
+
+
+
+</div>
