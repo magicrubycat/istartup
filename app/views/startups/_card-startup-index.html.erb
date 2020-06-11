@@ -4,8 +4,8 @@
       <div class="startup-card-index">
         <div class="sectors center">
           <% startup.sectors.each do |sector| %>
-          <p style="font-size:small; color:white"> <%= sector.name.capitalize %> </p>
           <img src="<%= startup.logo_url %>" alt="Startup Missing Logo" class="startup-logo">
+          <p id="sector-card-index"> <%= sector.name.capitalize %> </p>
         <% end %>
         </div>
       </div>

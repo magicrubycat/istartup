@@ -16,7 +16,7 @@
   margin: auto;
   margin-bottom: 20px;
   border-radius: 3px;
-  // text-align: center;
+  text-align: center;
 }
 
 .card-grid-interests {
@@ -62,11 +62,11 @@
   flex-grow: 1;
   // background-color: white;
   padding: 30px;
-  margin: auto;
+  // margin: auto;
   margin-bottom: 20px;
   // border-radius: 3px;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
+  // border-top: solid 1px;
+  border-right: solid 3px;
   border-color: #B0E5CB;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .card-applications {
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px rgba(0,0,0,0.1);
   width: 100%;
   padding: 20px;
   // align-items: center;
@@ -170,5 +170,30 @@
   text-align: right;
 }
 }
+// ______ CARINA CODE
 
+.overview-applications {
+  background-color: white;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 15px;
+}
+
+.dashboard-personal-information {
+  background-color: white;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  left:50%;
+  right:50%;
+}
+
+.dashboard-flexbox1 {
+  display: grid;
+  grid-template-columns: 12fr 4fr;
+  grid-gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
 
