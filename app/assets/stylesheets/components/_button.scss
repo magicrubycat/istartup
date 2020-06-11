@@ -5,9 +5,7 @@
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
   transition: opacity 0.3s ease;
-  // margin-top: 15px;
   margin-top: 15px;
   margin-right: 12px;
 }
@@ -15,6 +13,7 @@
 .btn-ghost:hover {
   opacity: 1;
   color: #FFFFFF;
+  opacity: 0.6;
 
 }
 
