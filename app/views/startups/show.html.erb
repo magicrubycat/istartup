@@ -17,9 +17,9 @@
       </div>
       <hr style="color:#52A87C; margin-bottom: 20px">
       <p> <%= @startup.description %> </p>
-      <p> 📍   <%= @startup.address %> </p>
-      <a href="<%= @startup.website %>" style="color:#52A87C; font-size:large"> <%= @startup.website %> </a>
-      <p style="margin-top: 15px"> ✉️   <%= @startup.email %> </p>
+      <p style="margin-bottom:0px"><i class="fas fa-map-marker-alt" style="margin-right:15px"></i>   <%= @startup.address %> </p>
+      <i class="fas fa-external-link-alt" style="margin-right:15px"></i> <a href="<%= @startup.website %>" style="color:#52A87C; font-size:large"> <%= @startup.website %> </a>
+      <p style="margin-top: 5px"><i class="fas fa-envelope" style="margin-right:15px"></i> <%= @startup.email %> </p>
 <!-- BUTTONS  -->
 
     <% if user_signed_in? && current_user.application_for(@startup) %>
