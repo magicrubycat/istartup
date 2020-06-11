@@ -1,7 +1,7 @@
 .box-application {
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  padding: 30px;
+  padding: 45px;
   margin: auto;
   margin-bottom: 20px;
   border-radius: 3px;
@@ -14,4 +14,22 @@
 
 .bodybody {
   background-color: #F4F4F4;
+}
+
+.buttons-application {
+  position: sticky;
+  bottom: 0px;
+  border-top: solid 1px rgba(50,50,50,0.5);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(255,255,255,0.85);
+}
+
+.buttons-application-show {
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.btn-opacity {
+  opacity: 0 !important;
 }
