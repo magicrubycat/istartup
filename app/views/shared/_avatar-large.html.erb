@@ -1,1 +1,5 @@
-<%= cl_image_tag current_user.photo.key, :class => "avatar-large" %>
+<% if current_user.photo.attached? %>
+  <%= cl_image_tag current_user.photo.key, :class => "avatar-large" %>
+<% else %>
+  <%= image_tag "Photoavatar.jpg", class: "avatar-large" %>
+<% end %>

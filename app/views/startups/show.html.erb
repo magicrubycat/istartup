@@ -1,8 +1,9 @@
+<% content_for :meta_title, "#{@startup.name}" %>
 <div class="container d-flex showw" style= "height:100vh">
   <div class="container card-startup-details">
     <div class="container">
       <div class="d-flex">
-        <h1> <%= @startup.name %> </h1>
+        <h1 style="white-space: nowrap;"> <%= @startup.name %> </h1>
         <% @startup.sectors.each do |sector| %>
           <i class="<%= sector.sector_icon_font %> sector-icon", style="margin-left:20px"></i>
         <% end %>

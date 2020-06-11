@@ -4,8 +4,9 @@
 </div> -->
 
 <div class="container">
+  <div class="margin">
   <div class="form-sector">
-    <h1 style="color:#50A87C;">Select your interests</h1>
+    <h1 style="color:#50A87C; margin-top:20px">Select your interests</h1>
     <p style="color:#52A87C; margin-top: -40px;">___________________________________________</p>
     <%= simple_form_for @user, url: profile_path(id: @user.id), method: :patch do |f| %>
     <div class="form-group">
@@ -13,8 +14,9 @@
       <input type="hidden" name="user[sector_ids][]" value="">
       <div class="category-choices">
         <% Sector.all.each do |sector| %>
-        <input type="checkbox" class="d-none" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>">
-        <label for="user_sector_ids_<%= sector.id %>" class="category-choice">
+        <input type="checkbox" class="d-none" value="<%= sector.id %>" name="user[sector_ids][]" id="user_sector_ids_<%= sector.id %>"<%= "checked" if@selected_selectors.include?(sector.name) %>>
+        <label for="user_sector_ids_<%= sector.id %>" class="category-choice
+          <%= "active" if@selected_selectors.include?(sector.name) %>">
           <div>
             <i class="<%= sector.sector_icon_font %>"></i>
             <p><%= sector.name.upcase %></p>
@@ -25,10 +27,11 @@
         <% end %>
       </div>
     </div>
-    <div id="button-center">
+    <div id="button-center" style="margin-bottom:20px;">
     <%= f.button :submit, "Save my interests", class: "btn btn-ghost" %>
     <% end %>
     </div>
+  </div>
   </div>
 </div>
 
