@@ -3,7 +3,6 @@
   <div class="container box-card-index">
     <h1 style="font-size: 35px; color:#52A87C; text-align:center;"><strong>It's a match!</strong></h1>
     <p style="color: #52A87C; text-align:center; margin-top:-10px" >______________________________________</p>
-    <h3 style="text-align:center; margin-bottom:-10px">Here are <strong style="color:#52A87C"><%= @startups.count %> startups</strong> matching your chosen interests:</h3>
     <!-- <h2 style="color:#50A87C; text-align:center; margin-bottom:-17px">Your chosen interests</h2> -->
     <div class="d-flex box-card-sectors">
     <% current_user.sectors.each do |sector| %>
@@ -20,6 +19,7 @@
   <!-- </div> -->
   <% end %>
   <div class="container box-card-index">
+    <h3 style="text-align:left; margin-bottom: 40px; margin-left: 95px;">Here are <strong style="color:#52A87C"><%= @startups.count %> startups</strong> matching your chosen interests:</h3>
     <!-- <div> -->
     <div class="startup-cards">
       <%= simple_form_for :search, url: startups_path, method: :get do |f| %>
