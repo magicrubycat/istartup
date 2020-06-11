@@ -1,29 +1,30 @@
 <div class="container applications">
-
   <div class="container d-flex">
     <div class="col-6">
       <div class="app card-grid-applications">
         <h3><i class="fas fa-save", style="margin-right:10px;"></i> Started applications</h3>
         <% @started_applications.each do |application| %>
-        <div class="card-applications">
-          <h3><i class="fas fa-file fa-3x", style="margin-right:10px;"></i> <%= application.startup.name %></h3>
-        </div>
+          <%= link_to application_path(application) do %>
+          <div class="card-applications">
+            <h3><i class="fas fa-file fa-3x", style="margin-right:10px;"></i> <%= application.startup.name %></h3>
+          </div>
+          <% end %>
         <% end %>
       </div>
     </div>
-
 
     <div class="col-6">
       <div class="app card-grid-applications">
         <h3><i class="fas fa-share-square", style="margin-right:10px;"></i> Sent applications</h3>
         <% @sent_applications.each do |application| %>
-          <div class="card-applications">
-            <h3><i class="fas fa-file fa-3x", style="margin-right:10px;"></i> <%= application.startup.name %></h3>
+          <%= link_to application_path(application) do %>
+            <div class="card-applications">
+              <h3><i class="fas fa-file fa-3x", style="margin-right:10px;"></i> <%= application.startup.name %></h3>
             <p style="font-size:small">Applied on: <%= application.updated_at.to_date.to_formatted_s(:long) %></p>
-          </div>
-        <% end %>
+            </div>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-
 </div>
