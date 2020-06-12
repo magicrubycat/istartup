@@ -22,7 +22,7 @@
           <%= link_to application_path(application) do %>
             <div class="card-applications">
               <h3><i class="fas fa-file fa-3x", style="margin-right:10px;"></i> <%= application.startup.name %></h3>
-            <p style="font-size:small">Applied on: <%= application.updated_at.to_date.to_formatted_s(:long) %></p>
+            <p style="font-size:small; text-decoration:none; color:black">Applied on: <%= application.updated_at.to_date.to_formatted_s(:long) %></p>
             </div>
             <% end %>
           <% end %>
