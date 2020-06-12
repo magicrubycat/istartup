@@ -16,7 +16,7 @@
     </div>
     <% end %>
     </div>
-    <div style="text-align:center; margin-top:-2px;"><%= link_to "Edit interests", sectors_path, class: "btn btn-outline-primary btn-sm" %></div>
+    <div style="text-align:center; margin-top:-2px;"><%= link_to "Edit interests", sectors_path(query: current_user.sectors.pluck(:name)), class: "btn btn-outline-primary btn-sm" %></div>
   <!-- </div> -->
   <% end %>
   <div class="container box-card-index">
