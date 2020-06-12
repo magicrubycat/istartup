@@ -1,5 +1,5 @@
 <div class="container favorites">
-  <h2 style="text-align:center">Your favorite companies</h2>
+  <h2 style="text-align: center; margin-top: 10px;">Your favorite companies</h2>
   <p style="color: #52A87C; text-align:center; margin-top:-15px;" >______________________________________</p>
   <div>
 <!-- MAYBE TODO -->
@@ -7,7 +7,7 @@
     <div class="card-favorites">
       <% @favorites.each do |favorite| %>
         <div class="card-favorites-infos mt-4">
-          <h3> <%= link_to favorite.name.capitalize, startup_path(favorite) %></h3>
+          <h3 style="margin-left: 130px;"><i class="fas fa-heart favorite-icon" style="text-align:center; margin-left:10px;"></i> <%= link_to favorite.name.capitalize, startup_path(favorite) %></h3>
            <p><% favorite.sectors.each do |sector| %> </p>
               <p><%= sector.name.capitalize %> </p>
             <% end %>
