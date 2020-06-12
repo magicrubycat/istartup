@@ -13,7 +13,8 @@
         <% else %>
           <% if @application.sent == false %>
           <%= simple_form_for @application, url: application_path(@application) do |f| %>
-            <%= f.input :document, as: :file, class: "btn btn-outline-primary", label: false, name: "Upload" %>
+            <%= f.input :document, input_html: { class: "d-none"}, label: false  %>
+            <%= f.input :document, input_html: { class: 'd-none', id: 'photo-input' }, label_html: { class: 'btn btn-outline-primary'}, label: 'Upload an additional document' %>
             <%= f.button :submit, "Attach document", class: "btn btn-outline-primary" %>
           <% end %>
           <% end %>
