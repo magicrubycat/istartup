@@ -2,7 +2,7 @@
   <% if user_signed_in? %>
   <div class="container box-card-index">
     <h1 style="font-size: 35px; color:#52A87C; text-align:center;"><strong>It's a match!</strong></h1>
-    <p style="color: #52A87C; text-align:center; margin-top:-10px" >______________________________________</p>
+    <p style="color: #52A87C; text-align:center; margin-top:-10px; margin-bottom: -5px;" >______________________________________</p>
     <!-- <h2 style="color:#50A87C; text-align:center; margin-bottom:-17px">Your chosen interests</h2> -->
     <div class="d-flex box-card-sectors">
     <% current_user.sectors.each do |sector| %>
@@ -16,7 +16,7 @@
     </div>
     <% end %>
     </div>
-    <div style="text-align:center"><%= link_to "Edit interests", sectors_path, class: "btn btn-outline-primary btn-sm" %></div>
+    <div style="text-align:center; margin-top:-2px;"><%= link_to "Edit interests", sectors_path, class: "btn btn-outline-primary btn-sm" %></div>
   <!-- </div> -->
   <% end %>
   <div class="container box-card-index">
